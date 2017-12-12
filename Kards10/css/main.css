@@ -36,11 +36,10 @@
  * ------------------------------------------------------------------- 
  */
 @import url("fonts.css");
-@import url("font-awesome/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("micons/micons.css");
 
-
-/** 
+/**
  * ===================================================================
  * 02. base style overrides - (_document-setup.scss)
  *
