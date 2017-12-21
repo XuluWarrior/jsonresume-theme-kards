@@ -1,0 +1,1 @@
+@intro-bg-img-url: "{{dataURISchema}}";
