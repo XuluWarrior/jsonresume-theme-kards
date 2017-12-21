@@ -1,0 +1,26 @@
+{
+  "name": "jsonresume-theme-kards",
+  "version": "0.0.1",
+  "description": "Theme for JSON Resume based on Kards design by styleshout",
+  "author": "XuluWarrior",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XuluWarrior/jsonresume-theme-kards.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XuluWarrior/jsonresume-theme-kards/issues"
+  },
+  "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
+  "scripts": {
+    "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "helper-markdown": "^1.0.0",
+    "moment": "^2.19.4"
+  },
+  "devDependencies": {
+    "less": "^2.7.3"
+  }
+}
