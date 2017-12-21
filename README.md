@@ -4,8 +4,8 @@ This is a theme for [JSON Resume](http://jsonresume.org/) based on [Kards design
 
 |  |  |
 | --- | --- |
-| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-1.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-2.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) |
-| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-3.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-4.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) |
+| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-1.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-2.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) |
+| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-3.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-4.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#resume) |
 
 ## Getting started
 
