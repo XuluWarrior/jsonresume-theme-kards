@@ -13,7 +13,8 @@
   },
   "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
   "scripts": {
-    "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css"
+    "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css",
+    "release:prepare": "npm version patch -m \"Release: %s\""
   },
   "dependencies": {
     "handlebars": "^4.0.11",
