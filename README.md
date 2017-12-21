@@ -55,4 +55,5 @@ npm run build:styles
 
 ## License
 Template design is available under [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/) attributed to [styleshout](https://www.styleshout.com/)
+
 Source code for generating resume is available under [the MIT license](http://mths.be/mit).
