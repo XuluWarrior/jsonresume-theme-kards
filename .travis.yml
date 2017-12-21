@@ -1,0 +1,11 @@
+language: node_js
+node_js: '4'
+
+deploy:
+  provider: npm
+  email: npm@xuluwarrior.org
+  api_key:
+    secure: QhoVL9RenyubyQU2AXhNoyzftwB/dvEwHoySKJ/XAvsVLSkNSvZWXIedE1Qpn1D0O5yq/z4qeJAAt7VakAbhz32jVi7k+TLxy/PDCSZ1D97tpOa6QjvaPfZAczZY8mQyMePJ1fniFHBqGH1t/0LSPqmEcOEsYA3LNjyq2Be9otjFInp7O/h1BiIPsU0X5DcNtMXNrriSY2SPNG5mQ4BBKeUXHUJ7+21HoQ61u9d7mLXEYEuKhBMCLSEfTxgD2CWj1dnweC8JuV3hWUaAtDPp+iioWgLTo4EKvjn+RqMnR20QbhUwNJhTki/WxpbxDMeGdiyH+zJ733TDk+Gh0RhON6GyAd02h4a+Mz68UuY2/DayxAmQslPImGFx9k+HeKneYmoRZItTyhq3PEhAlOInlVP5fueQDlg8TbzzhdVr6XQyIyokdAdq+3mh70MsmPh8uxd6L0fy8D8xEu/nQZbT9L2+fKGwn9GwphJnaRjQoRgaxO52BSUZKNuiWR93hq3EVXFERiP9Wih+VRUQYFL56Rr6A+byW5Nc8cba5O+4SeBb6LbAql2Yyd/2gFYjBQ26JwTNnL6d98A8epTUPtDN89ulU4bDwj8KPxyyPykYERRUDVpTKkv0Y4OZJDIAipnUfPw04z+Adue+pHSZx8h0kR3SnjPH8hTobjwtMda1Bb8=
+  on:
+    tags: true
+    repo: XuluWarrior/jsonresume-theme-kards
