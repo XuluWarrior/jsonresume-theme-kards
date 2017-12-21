@@ -6,7 +6,7 @@
     "email": "richard.hendriks@mail.com",
     "phone": "(912) 555-4321",
     "url": "http://richardhendricks.example.com",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a ìlength-limitedî conversation!",
+    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a ‚Äúlength-limited‚Äù conversation!",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -36,7 +36,7 @@
       "url": "http://piedpiper.example.com",
       "startDate": "2013-12-01",
       "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scoresô that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores‚Ñ¢ that are not merely competitive, but approach the theoretical limit of lossless compression.",
       "highlights": [
         "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
         "Successfully won Techcrunch Disrupt",
@@ -157,3 +157,4 @@
     "lastModified": "2017-12-24T15:53:00"
   }
 }
+
