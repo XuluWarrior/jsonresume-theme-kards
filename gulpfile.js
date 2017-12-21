@@ -13,7 +13,7 @@ gulp.task('poppins', function() {
 });
 
 gulp.task('inline-img', function() {
-    gulp.src('./Kards10/images/intro-bg.jpg')
+    gulp.src('./Kards10/images/*')
         .pipe(imageDataURI({
             template: {
                 file: './Kards10/less/config.less.tpl'

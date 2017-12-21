@@ -1,1 +1,1 @@
-@intro-bg-img-url: "{{dataURISchema}}";
+@{{className}}-img-url: "{{dataURISchema}}";
