@@ -61,7 +61,7 @@ npm run build:styles
 ### Extra sections
 The original Kards design included extra sections such as [Portfolio](https://www.styleshout.com/templates/preview/Kards10/#portfolio) and [Services](https://www.styleshout.com/templates/preview/Kards10/index.html#services).  These don't map directly to jsonresume and so are commented out in the template.
 
-To include them in your template, edit **resume.hbs* and uncomment the appropriate sections and personalise the content e.g.
+To include them in your template, edit **resume.hbs** and uncomment the appropriate sections and personalise the content e.g.
 
 ```
 <!--&lt;!&ndash; Portfolio Section-->
