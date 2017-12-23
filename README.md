@@ -4,8 +4,8 @@ This is a theme for [JSON Resume](http://jsonresume.org/) based on [Kards design
 
 |  |  |
 | --- | --- |
-| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-1.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-2.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) |
-| [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-3.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-4.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#resume) |
+| [![Example resume (intro)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-1.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume (about)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-2.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) |
+| [![Example resume (profile)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-3.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-4.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#resume) |
 
 ## Getting started
 
@@ -57,6 +57,25 @@ and then rebuild styles.css
 ```
 npm run build:styles
 ```
+
+### Extra sections
+The original Kards design included extra sections such as [Portfolio](https://www.styleshout.com/templates/preview/Kards10/#portfolio) and [Services](https://www.styleshout.com/templates/preview/Kards10/index.html#services).  These don't map directly to jsonresume and so are commented out in the template.
+
+To include them in your template, edit **resume.hbs* and uncomment the appropriate sections and personalise the content e.g.
+
+```
+<!--&lt;!&ndash; Portfolio Section-->
+<!--================================================== &ndash;&gt;-->
+<!--<section id="portfolio">-->
+
+ ...
+
+<!--</section> &lt;!&ndash; /portfolio &ndash;&gt;-->  
+```
+ 
+|  |  |
+| --- | --- |
+| [![Portfolio section](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-portfolio.png)](https://www.styleshout.com/templates/preview/Kards10/#portfolio) | [![Services section](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-services.png)](https://www.styleshout.com/templates/preview/Kards10/index.html#services) |
 
 ## License
 Template design is available under [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/) attributed to [styleshout](https://www.styleshout.com/)
