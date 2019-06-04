@@ -1488,7 +1488,7 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   html {
-    font-size: 9.411764705882353px;
+    font-size: 9.41176471px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1498,7 +1498,7 @@ html {
 }
 @media only screen and (max-width: 400px) {
   html {
-    font-size: 9.411764705882353px;
+    font-size: 9.41176471px;
   }
 }
 html,
@@ -1601,14 +1601,14 @@ h5,
   font-size: 1.4rem;
   line-height: 1.714;
   text-transform: uppercase;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
 }
 h6,
 .h06 {
   font-size: 1.3rem;
   line-height: 1.846;
   text-transform: uppercase;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
 }
 p img {
   margin: 0;
@@ -1686,7 +1686,7 @@ abbr {
   font-family: "poppins-bold", serif;
   font-variant: small-caps;
   text-transform: lowercase;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   color: #888888;
 }
 var,
@@ -1702,8 +1702,8 @@ pre {
 }
 code {
   font-size: 1.4rem;
-  margin: 0 .2rem;
-  padding: .3rem .6rem;
+  margin: 0 0.2rem;
+  padding: 0.3rem 0.6rem;
   white-space: nowrap;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
@@ -1756,18 +1756,18 @@ ul {
   margin-left: 1.7rem;
 }
 ul li {
-  padding-left: .4rem;
+  padding-left: 0.4rem;
 }
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: .6rem 0 .6rem 1.7rem;
+  margin: 0.6rem 0 0.6rem 1.7rem;
 }
 ul.disc li {
   display: list-item;
   list-style: none;
-  padding: 0 0 0 .8rem;
+  padding: 0 0 0 0.8rem;
   position: relative;
 }
 ul.disc li::before {
@@ -1856,10 +1856,10 @@ form,
  * -------------------------------------------------------------------
  */
 img.pull-right {
-  margin: .9rem 0 0 2.4rem;
+  margin: 0.9rem 0 0 2.4rem;
 }
 img.pull-left {
-  margin: .9rem 2.4rem 0 0;
+  margin: 0.9rem 2.4rem 0 0;
 }
 /**
  * block grid paddings - (_document-setup.scss) 
@@ -2073,7 +2073,7 @@ label,
 legend {
   font-family: "poppins-bold", sans-serif;
   font-size: 1.4rem;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   color: #3b3b3b;
   display: block;
 }
@@ -2091,7 +2091,7 @@ label > input[type="checkbox"],
 label > input[type="radio"] {
   margin: 0;
   position: relative;
-  top: .15rem;
+  top: 0.15rem;
 }
 /**
  * Style Placeholder Text  
@@ -2130,11 +2130,11 @@ input[type="button"] {
   font-family: "poppins-bold", sans-serif;
   font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   height: 5.4rem;
   line-height: 5.4rem;
   padding: 0 3rem;
-  margin: 0 .3rem 1.2rem 0;
+  margin: 0 0.3rem 1.2rem 0;
   background: #d8d8d8;
   color: #313131;
   text-decoration: none;
@@ -2276,7 +2276,7 @@ input::-moz-focus-inner {
 .drop-cap:first-letter {
   float: left;
   margin: 0;
-  padding: 1.5rem .6rem 0 0;
+  padding: 1.5rem 0.6rem 0 0;
   font-size: 8.4rem;
   font-family: "poppins-bold", sans-serif;
   line-height: 6rem;
@@ -2406,7 +2406,7 @@ input::-moz-focus-inner {
 }
 .stats-tabs li a em {
   display: block;
-  margin: .6rem 0 0 0;
+  margin: 0.6rem 0 0 0;
   font-size: 1.4rem;
   font-family: "poppins-regular", sans-serif;
   color: #888888;
@@ -2420,7 +2420,7 @@ input::-moz-focus-inner {
   margin: 6rem 0 3rem;
 }
 .skill-bars li {
-  height: .6rem;
+  height: 0.6rem;
   background: #a1a1a1;
   width: 100%;
   margin-bottom: 6rem;
@@ -2434,7 +2434,7 @@ input::-moz-focus-inner {
   font-family: "poppins-bold", sans-serif;
   color: #313131;
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-size: 1.5rem;
   line-height: 2.4rem;
 }
@@ -2453,7 +2453,7 @@ input::-moz-focus-inner {
   font-size: 1.1rem;
   line-height: 1;
   background: #313131;
-  padding: .6rem .6rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 3px;
 }
 .skill-bars li .progress span::after {
@@ -2558,7 +2558,7 @@ input::-moz-focus-inner {
   font-size: 1.6rem;
   line-height: 1.875;
   margin-bottom: 0.3rem;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
 }
 /**
  * responsive:
@@ -2579,7 +2579,7 @@ input::-moz-focus-inner {
   }
   .section-intro h5 {
     font-size: 1.5rem;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -2818,7 +2818,7 @@ header .logo a {
   width: 100%;
   height: 100%;
   background: #111111;
-  opacity: .85;
+  opacity: 0.85;
 }
 .intro-content {
   display: table-cell;
@@ -2835,7 +2835,7 @@ header .logo a {
   line-height: 1.071;
   max-width: 900px;
   margin-top: 0;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -2847,7 +2847,7 @@ header .logo a {
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
@@ -2855,7 +2855,7 @@ header .logo a {
   font-size: 1.7rem;
   line-height: 2.4rem;
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: #FFFFFF;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
@@ -2882,10 +2882,10 @@ header .logo a {
   height: 6rem !important;
   line-height: 5.4rem !important;
   padding: 0 3.5rem 0 3rem !important;
-  margin-top: .6rem;
+  margin-top: 0.6rem;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
 }
 .intro-content .button:hover,
 .intro-content .button:focus {
@@ -2966,18 +2966,18 @@ header .logo a {
   }
   .intro-content h1 {
     font-size: 4.6rem;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
   }
   .intro-content h5 {
     font-size: 1.5rem;
-    margin-bottom: .3rem;
-    letter-spacing: .2rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.2rem;
   }
   .intro-content .intro-position {
     font-size: 1.2rem;
   }
   .intro-content .intro-position span {
-    padding: 0 .6rem;
+    padding: 0 0.6rem;
   }
   .intro-content .intro-position span::before,
   .intro-content .intro-position span::after {
@@ -3010,7 +3010,7 @@ header .logo a {
   height: 9rem;
   width: 9rem;
   border-radius: 50%;
-  margin: .9rem 0 0 0;
+  margin: 0.9rem 0 0 0;
   float: left;
 }
 .intro-info .lead {
@@ -3027,7 +3027,7 @@ header .logo a {
   font-family: "poppins-bold", sans-serif;
   font-size: 1.8rem;
   text-transform: uppercase;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
 }
 .about-content .info-list {
   list-style: none;
@@ -3035,13 +3035,13 @@ header .logo a {
 }
 .about-content .info-list li {
   padding: 0 0 1.5rem 0;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 .about-content .info-list li strong {
   font-family: "poppins-bold", sans-serif;
   color: #313131;
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-size: 1.5rem;
   line-height: 3rem;
 }
@@ -3162,13 +3162,13 @@ header .logo a {
   color: #FFFFFF;
   position: absolute;
   left: 35%;
-  top: .9rem;
+  top: 0.9rem;
   margin-left: -2.4rem;
 }
 #resume .timeline-ico i {
   position: relative;
-  left: .05rem;
-  top: .2rem;
+  left: 0.05rem;
+  top: 0.2rem;
 }
 #resume .timeline-header {
   float: left;
@@ -3247,7 +3247,7 @@ header .logo a {
   #resume .timeline-content h4 {
     padding-bottom: 0;
     padding-top: 2.1rem;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     font-size: 1.7rem;
   }
   #resume .timeline-content h4::after {
@@ -3345,7 +3345,7 @@ header .logo a {
   text-transform: uppercase;
   font-family: "poppins-regular", sans-serif;
   font-size: 1.2rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: rgba(255, 255, 255, 0.6);
 }
 #portfolio .folio-item:hover .overlay {
@@ -3402,7 +3402,7 @@ header .logo a {
   font-family: "poppins-bold", sans-serif;
   font-size: 1.5rem;
   line-height: 2.4rem;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 .popup-modal .description-box p {
   font-family: "poppins-regular", sans-serif;
@@ -3415,7 +3415,7 @@ header .logo a {
   font-size: 1.1rem;
   line-height: 1.8rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   display: block;
   text-align: left;
   color: rgba(0, 0, 0, 0.5);
@@ -3471,7 +3471,7 @@ header .logo a {
 }
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
-  opacity: .9;
+  opacity: 0.9;
 }
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
@@ -3591,7 +3591,7 @@ header .logo a {
   width: 100%;
   height: 100%;
   background: #151515;
-  opacity: .9;
+  opacity: 0.9;
 }
 #services .section-intro {
   margin-bottom: 1.8rem;
@@ -3634,7 +3634,7 @@ header .logo a {
 .owl-pagination {
   text-align: center;
   width: 100%;
-  margin: .6rem 0 0;
+  margin: 0.6rem 0 0;
 }
 .owl-theme .owl-controls .owl-page {
   display: inline-block;
@@ -3643,7 +3643,7 @@ header .logo a {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
-  margin: 1.2rem .8rem 0 .8rem;
+  margin: 1.2rem 0.8rem 0 0.8rem;
   border-radius: 50%;
   display: inline-block;
   background: #FFFFFF;
@@ -3777,9 +3777,9 @@ header .logo a {
   line-height: 2.4rem;
   position: absolute;
   bottom: -1.2rem;
-  right: .6rem;
+  right: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   padding: 0 2rem;
   margin: 0;
   color: #FFFFFF;
@@ -3828,7 +3828,7 @@ header .logo a {
 #contact button.submitform {
   font-size: 1.5rem;
   display: block;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   height: 6.6rem;
   line-height: 6.6rem;
   padding: 0 3rem;
@@ -3873,7 +3873,7 @@ header .logo a {
   display: none;
   font-family: "poppins-bold", sans-serif;
   color: #FFFFFF;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
 .oldie #submit-loader .s-loader {
@@ -3919,7 +3919,7 @@ header .logo a {
   background-color: #FFFFFF;
   border-radius: 100%;
   display: inline-block;
-  margin-right: .9rem;
+  margin-right: 0.9rem;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
@@ -4165,14 +4165,14 @@ footer .copyright span:last-child::after {
 /* fade */
 .owl-fade-out {
   z-index: 10;
-  -webkit-animation: fadeOut .7s both ease;
-  -moz-animation: fadeOut .7s both ease;
-  animation: fadeOut .7s both ease;
+  -webkit-animation: fadeOut 0.7s both ease;
+  -moz-animation: fadeOut 0.7s both ease;
+  animation: fadeOut 0.7s both ease;
 }
 .owl-fade-in {
-  -webkit-animation: fadeIn .7s both ease;
-  -moz-animation: fadeIn .7s both ease;
-  animation: fadeIn .7s both ease;
+  -webkit-animation: fadeIn 0.7s both ease;
+  -moz-animation: fadeIn 0.7s both ease;
+  animation: fadeIn 0.7s both ease;
 }
 /* backSlide */
 .owl-backSlide-out {
@@ -4187,25 +4187,25 @@ footer .copyright span:last-child::after {
 }
 /* goDown */
 .owl-goDown-out {
-  -webkit-animation: scaleToFade .7s ease both;
-  -moz-animation: scaleToFade .7s ease both;
-  animation: scaleToFade .7s ease both;
+  -webkit-animation: scaleToFade 0.7s ease both;
+  -moz-animation: scaleToFade 0.7s ease both;
+  animation: scaleToFade 0.7s ease both;
 }
 .owl-goDown-in {
-  -webkit-animation: goDown .6s ease both;
-  -moz-animation: goDown .6s ease both;
-  animation: goDown .6s ease both;
+  -webkit-animation: goDown 0.6s ease both;
+  -moz-animation: goDown 0.6s ease both;
+  animation: goDown 0.6s ease both;
 }
 /* scaleUp */
 .owl-fadeUp-in {
-  -webkit-animation: scaleUpFrom .5s ease both;
-  -moz-animation: scaleUpFrom .5s ease both;
-  animation: scaleUpFrom .5s ease both;
+  -webkit-animation: scaleUpFrom 0.5s ease both;
+  -moz-animation: scaleUpFrom 0.5s ease both;
+  animation: scaleUpFrom 0.5s ease both;
 }
 .owl-fadeUp-out {
-  -webkit-animation: scaleUpTo .5s ease both;
-  -moz-animation: scaleUpTo .5s ease both;
-  animation: scaleUpTo .5s ease both;
+  -webkit-animation: scaleUpTo 0.5s ease both;
+  -moz-animation: scaleUpTo 0.5s ease both;
+  animation: scaleUpTo 0.5s ease both;
 }
 /* Keyframes */
 /*empty*/
@@ -4274,54 +4274,54 @@ footer .copyright span:last-child::after {
 }
 @-webkit-keyframes backSlideOut {
   25% {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: translateZ(-500px);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
   }
   100% {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
   }
 }
 @-moz-keyframes backSlideOut {
   25% {
-    opacity: .5;
+    opacity: 0.5;
     -moz-transform: translateZ(-500px);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     -moz-transform: translateZ(-500px) translateX(-200%);
   }
   100% {
-    opacity: .5;
+    opacity: 0.5;
     -moz-transform: translateZ(-500px) translateX(-200%);
   }
 }
 @keyframes backSlideOut {
   25% {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateZ(-500px);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateZ(-500px) translateX(-200%);
   }
   100% {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateZ(-500px) translateX(-200%);
   }
 }
 @-webkit-keyframes backSlideIn {
   0%,
   25% {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: translateZ(-500px) translateX(200%);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     -webkit-transform: translateZ(-500px);
   }
   100% {
@@ -4332,11 +4332,11 @@ footer .copyright span:last-child::after {
 @-moz-keyframes backSlideIn {
   0%,
   25% {
-    opacity: .5;
+    opacity: 0.5;
     -moz-transform: translateZ(-500px) translateX(200%);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     -moz-transform: translateZ(-500px);
   }
   100% {
@@ -4347,11 +4347,11 @@ footer .copyright span:last-child::after {
 @keyframes backSlideIn {
   0%,
   25% {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateZ(-500px) translateX(200%);
   }
   75% {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateZ(-500px);
   }
   100% {
