@@ -14,7 +14,7 @@ async function clickMenuLink(page, percySnapshot, linkName) {
 
 PercyScript.run(async (page, percySnapshot) => {
     await page.goto('http://localhost:5001/index.html');
-    await page.waitFor(500);
+    await page.waitFor(1000);
     await percySnapshot('homepage');
 
     // Open menu
