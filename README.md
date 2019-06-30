@@ -1,4 +1,5 @@
 # JSON Resume Kards Theme 
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/XuluWarrior/jsonresume-theme-kards)
 
 This is a theme for [JSON Resume](http://jsonresume.org/) based on [Kards design](https://www.styleshout.com/free-templates/kards/) by [styleshout](https://www.styleshout.com/).
 
