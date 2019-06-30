@@ -18,13 +18,14 @@
   },
   "dependencies": {
     "handlebars": "^4.1.2",
-    "helper-markdown": "^1.0.0",
+    "handlebars-utils": "^1.0.6",
+    "marked": "^0.6.3",
     "moment": "^2.24.0"
   },
   "devDependencies": {
     "less": "^3.9.0"
   },
-  "engineStrict" : true,
+  "engineStrict": true,
   "engines": {
     "node": ">=6"
   }
