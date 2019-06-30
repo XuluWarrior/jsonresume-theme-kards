@@ -7,15 +7,13 @@ before_install:
 install:
 - npm install
 - npm install -g resume-cli
-- npm install -g @percy/agent
+- npm install @percy/script
 
 script:
 - npm run build:styles
 - resume serve --resume=example-resume.json --port 5001 --silent &
 - sleep 2s
-- mkdir resume
-- curl http://localhost:5001 > resume/example-resume.html
-- percy snapshot resume
+- npx percy exec -- node tests/percy.js
 
 deploy:
   provider: npm
