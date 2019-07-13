@@ -14,7 +14,7 @@
   "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
   "scripts": {
     "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css",
-    "release:prepare": "npm version patch -m \"Release: %s\""
+    "release:prepare": "git checkout master && git pull && npm version patch -m \"Release: %s\""
   },
   "dependencies": {
     "handlebars": "^4.1.2",
