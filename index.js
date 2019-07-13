@@ -136,11 +136,16 @@ function render(resume) {
 	//  Handlebars.registerPartial(name, template);
 	//});
 
+	const packageJSON = require("./package");
 	return Handlebars.compile(tpl)({
 		css: css,
 		mainJs: mainJs,
 		pluginsJs: pluginsJs,
-		resume: resume
+		resume: resume,
+		meta: {
+			packageName: packageJSON.name,
+			version:  packageJSON.version
+		}
 	});
 }
 
