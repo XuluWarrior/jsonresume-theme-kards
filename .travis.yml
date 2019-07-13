@@ -5,9 +5,13 @@ before_install:
 - npm install -g npm@latest
 
 install:
-- npm install
-- npm install -g resume-cli
-- npm install --no-save @percy/script
+  - npm ci
+  - npm install -g resume-cli
+  - npm install --no-save @percy/script
+
+cache:
+  directories:
+    - "$HOME/.npm"
 
 script:
 - npm run build:styles
