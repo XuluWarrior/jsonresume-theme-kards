@@ -7,7 +7,7 @@ before_install:
 install:
 - npm install
 - npm install -g resume-cli
-- npm install @percy/script
+- npm install --no-save @percy/script
 
 script:
 - npm run build:styles
