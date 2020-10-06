@@ -6,7 +6,7 @@ before_install:
 
 install:
   - npm ci
-  - npm install -g resume-cli
+  - npm install -g resume-cli@1.2.8
   - npm install --no-save @percy/script
 
 cache:
