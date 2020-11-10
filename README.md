@@ -36,7 +36,7 @@ The resume should open in a new tab in your default browser
 ### Get source from GitHub
 ```
 git clone https://github.com/XuluWarrior/jsonresume-theme-kards.git
-cd jsonresume-theme-orbit
+cd jsonresume-theme-kards
 ```
 
 ### Serve theme
