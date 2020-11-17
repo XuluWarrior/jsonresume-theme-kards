@@ -67,7 +67,7 @@ Handlebars.registerHelper('skillLevel', function(str) {
 		case "master":
 			return "100";
 		default:
-			return parseInt(str)
+			return parseInt(str, 10)
 	}
 });
 
