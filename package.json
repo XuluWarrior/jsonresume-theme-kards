@@ -23,7 +23,7 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "less": "^3.9.0"
+    "less": "^4.0.0"
   },
   "engineStrict": true,
   "engines": {
