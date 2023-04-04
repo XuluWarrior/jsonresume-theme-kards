@@ -14,6 +14,8 @@
   "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
   "scripts": {
     "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css",
+    "serve": "resume serve --theme . --resume example-resume.json",
+    "start": "npm run build:styles && npm run serve",
     "release:prepare": "git checkout master && git pull && npm version patch -m \"Release: %s\""
   },
   "dependencies": {
