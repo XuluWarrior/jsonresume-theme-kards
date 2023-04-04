@@ -73,7 +73,7 @@ body {
 	font-family: "lora-regular", serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
-	color: #6e6e6e;
+	color: @secondary-text-color;
 }
 
 /**
@@ -593,7 +593,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: @primary-accent-color-darkened;
+	color: @secondary-accent-color;
 	border-bottom: 1px solid @primary-accent-color;
 }
 label, legend {
@@ -693,8 +693,8 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-	background: @primary-text-color;
-	color: @tertiary-text-color;
+	background: @primary-color;
+	color: @contrast-text-color;
 }
 .button.button-primary:hover,
 a.button.button-primary:hover,
@@ -972,7 +972,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	top: -3.6rem;
 	display: block;
 	font-family: "poppins-regular", sans-serif;
-	color: white;
+	color: @contrast-text-color;
 	font-size: 1.1rem;
 	line-height: 1;
 	background: @primary-text-color;
@@ -1041,7 +1041,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: @primary-accent-color;
+	color: @secondary-accent-color;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1320,7 +1320,7 @@ header {
     }
 
     h5 {
-        color: @primary-accent-color-darkened;
+        color: @secondary-accent-color;
         font-family: "poppins-bold", sans-serif;
         font-size: 2.3rem;
         line-height: 1.565;
@@ -1372,7 +1372,7 @@ header {
         letter-spacing: .25rem;
 
         &:hover, .intro-content .button:focus {
-            border-color: @primary-accent-color-darkened;
+            border-color: @secondary-accent-color;
         }
 
         &::after {
@@ -1407,7 +1407,7 @@ header {
 	color: @tertiary-text-color;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: @primary-accent-color-darkened;
+	color: @secondary-accent-color;
 }
 
 /**
@@ -1517,6 +1517,7 @@ header {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+    color: @secondary-accent-color;
 }
 .about-content .info-list {
 	list-style: none;
@@ -1620,7 +1621,7 @@ header {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: @primary-accent-color;
+	color: @secondary-accent-color;
 }
 
 #resume .resume-timeline {
@@ -1636,7 +1637,7 @@ header {
 	display: block;
 	width: 1px;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: @secondary-text-color;
 	position: absolute;
 	left: 35%;
 	top: 0;
@@ -1652,7 +1653,7 @@ header {
 	background: @primary-text-color;
 	border-radius: 50%;
 	text-align: center;
-	color: @tertiary-text-color;
+	color: @weighted-section-background-color;
 	position: absolute;
 	left: 35%;
 	top: .9rem;
@@ -1710,7 +1711,7 @@ header {
 	display: block;
 	height: 3px;
 	width: 50px;
-	background: rgba(0, 0, 0, 0.2);
+	background: @secondary-accent-color;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -1966,7 +1967,7 @@ header {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: @primary-accent-color-darkened;
+	background: @secondary-accent-color;
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2042,7 +2043,7 @@ header {
 	text-align: center;
 }
 #cta p.lead {
-	color: #6e6e6e;
+	color: @secondary-text-color;
 }
 .cta-content {
 	max-width: 640px;
@@ -2127,9 +2128,8 @@ header {
 #services .section-intro {
 	margin-bottom: 1.8rem;
 }
-
 #services .section-intro h1 {
-	color: white;
+	color: @secondary-accent-color;
 }
 #services .section-intro h5 {
 	color: @primary-accent-color;
@@ -2265,10 +2265,10 @@ header {
 	padding-bottom: 7.2rem;
 }
 #contact .section-intro h1 {
-	color: white;
+	color: @primary-accent-color;
 }
 #contact .section-intro h5 {
-	color: @primary-accent-color;
+	color: @secondary-accent-color;
 }
 #contact .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2376,7 +2376,7 @@ header {
 	color: @tertiary-text-color;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: @primary-accent-color-darkened;
+	background: @secondary-accent-color;
 }
 #message-warning, #message-success {
 	display: none;
@@ -2588,7 +2588,7 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
-	background: @primary-accent-color-darkened;
+	background: @secondary-accent-color;
 	color: @tertiary-text-color;
 	text-align: center;
 	text-transform: uppercase;
