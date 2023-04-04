@@ -19,7 +19,7 @@
  *
  * ------------------------------------------------------------------- 
  */
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -2887,7 +2887,7 @@ header .top-bar {
   width: 100%;
   left: 0;
   bottom: 7.2rem;
-  font-size: 3.3rem;
+  font-size: 2.5rem;
   margin: 0;
   padding: 0;
 }
