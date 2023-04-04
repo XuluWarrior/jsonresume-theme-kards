@@ -1625,7 +1625,7 @@ header {
 }
 
 #resume .resume-timeline {
-	max-width: 980px;
+	max-width: 1080px;
 }
 #resume .timeline-wrap {
 	position: relative;
@@ -1701,20 +1701,26 @@ header {
 #resume .timeline-content {
 	margin-left: 35%;
 	padding-left: 60px;
-}
-#resume .timeline-content h4 {
-	position: relative;
-	padding-bottom: 1.8rem;
-}
-#resume .timeline-content h4::after {
-	content: "";
-	display: block;
-	height: 3px;
-	width: 50px;
-	background: @secondary-accent-color;
-	position: absolute;
-	left: 0;
-	bottom: 0;
+
+    h4 {
+        position: relative;
+        padding-bottom: 1.8rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 50px;
+            background: @secondary-accent-color;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
 }
 
 /**
