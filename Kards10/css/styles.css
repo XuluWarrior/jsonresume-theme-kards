@@ -2532,10 +2532,10 @@ input::-moz-focus-inner {
  *
  * -------------------------------------------------------------------
  */
-.grey-section {
+.weighted-section {
   background: #ebebeb;
 }
-.grey-section p.lead {
+.weighted-section p.lead {
   color: #7d7d7d;
 }
 .section-intro {
@@ -2974,7 +2974,7 @@ header .top-bar {
  * -------------------------------------------------------------------
  */
 #about {
-  background: #FFFFFF;
+  background: #ffffff;
   padding-top: 12rem;
   padding-bottom: 15rem;
 }

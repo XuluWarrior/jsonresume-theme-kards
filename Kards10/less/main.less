@@ -1018,11 +1018,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * -------------------------------------------------------------------
  */
-.grey-section {
-	background: #ebebeb;
-}
-.grey-section p.lead {
-	color: #7d7d7d;
+.weighted-section {
+	background: @weighted-section-background-color;
+
+    p.lead {
+        color: @weighted-section-text-color;
+    }
 }
 .section-intro {
 	max-width: 700px;
