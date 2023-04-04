@@ -1528,7 +1528,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  color: #FF0077;
+  color: #fbe094;
   outline: 0;
 }
 /**
@@ -1776,7 +1776,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #FF0077;
+  background: #fbe094;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -1784,7 +1784,7 @@ ul.disc li::before {
 }
 dt {
   margin: 0;
-  color: #FF0077;
+  color: #fbe094;
 }
 dd {
   margin: 0 0 0 2rem;
@@ -1903,7 +1903,7 @@ img.pull-left {
   display: none;
 }
 .pace .pace-progress {
-  background: #FF0077;
+  background: #fbe094;
   position: fixed;
   z-index: 900;
   top: 0;
@@ -1946,7 +1946,7 @@ img.pull-left {
   border-top: 11px solid rgba(255, 255, 255, 0.1);
   border-right: 11px solid rgba(255, 255, 255, 0.1);
   border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-  border-left: 11px solid #FF0077;
+  border-left: 11px solid #fbe094;
   -webkit-animation: load 1.1s infinite linear;
   animation: load 1.1s infinite linear;
   display: block;
@@ -2066,8 +2066,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  color: #cc005f;
-  border-bottom: 1px solid #FF0077;
+  color: #fbe094;
+  border-bottom: 1px solid #fbe094;
 }
 label,
 legend {
@@ -2218,8 +2218,8 @@ button.stroke.large,
 }
 button.stroke:hover,
 .button.stroke:hover {
-  border: 3px solid #FF0077;
-  color: #FF0077;
+  border: 3px solid #fbe094;
+  color: #fbe094;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -2402,7 +2402,7 @@ input::-moz-focus-inner {
   color: #252525;
 }
 .stats-tabs li a:hover {
-  color: #FF0077;
+  color: #fbe094;
 }
 .stats-tabs li a em {
   display: block;
@@ -2554,7 +2554,7 @@ input::-moz-focus-inner {
   margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-  color: #FF0077;
+  color: #fbe094;
   font-size: 1.6rem;
   line-height: 1.875;
   margin-bottom: 0.3rem;
@@ -2647,7 +2647,7 @@ header .logo a {
 }
 .menu-toggle span {
   display: block;
-  background-color: #FF0077;
+  background-color: #fbe094;
   width: 24px;
   height: 3px;
   margin-top: -1.5px;
@@ -2706,7 +2706,7 @@ header .logo a {
 }
 .menu-toggle.is-clicked span::before,
 .menu-toggle.is-clicked span::after {
-  background-color: #FF0077;
+  background-color: #fbe094;
   -moz-transition-delay: 0s, 0.2s;
   -o-transition-delay: 0s, 0.2s;
   -webkit-transition-delay: 0s, 0.2s;
@@ -2760,12 +2760,12 @@ header .logo a {
   border: none;
 }
 .main-navigation li a:hover {
-  color: #FF0077;
+  color: #fbe094;
   padding-left: 1rem;
 }
 .main-navigation li.current > a {
   background: none;
-  color: #FF0077;
+  color: #fbe094;
 }
 /**
  * responsive:
@@ -2841,7 +2841,7 @@ header .logo a {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-  color: #cc005f;
+  color: #fbe094;
   font-family: "poppins-bold", sans-serif;
   font-size: 2.3rem;
   line-height: 1.565;
@@ -2888,8 +2888,8 @@ header .logo a {
   letter-spacing: 0.25rem;
 }
 .intro-content .button:hover,
-.intro-content .button:focus {
-  border-color: #cc005f;
+.intro-content .button .intro-content .button:focus {
+  border-color: #fbe094;
 }
 .intro-content .button::after {
   display: inline-block;
@@ -2922,7 +2922,7 @@ header .logo a {
 }
 .intro-social li a:hover,
 .intro-social li a:focus {
-  color: #cc005f;
+  color: #fbe094;
 }
 /**
  * responsive:
@@ -3128,7 +3128,7 @@ header .logo a {
   text-align: center;
 }
 #resume .resume-header h2 {
-  color: #FF0077;
+  color: #fbe094;
 }
 #resume .resume-timeline {
   max-width: 980px;
@@ -3461,7 +3461,7 @@ header .logo a {
   border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-  background: #cc005f;
+  background: #fbe094;
   border: none;
 }
 @media only screen and (max-width: 600px) {
@@ -3614,7 +3614,7 @@ header .logo a {
   color: white;
 }
 #services .section-intro h5 {
-  color: #FF0077;
+  color: #fbe094;
 }
 #services .section-intro p {
   color: rgba(255, 255, 255, 0.7);
@@ -3636,7 +3636,7 @@ header .logo a {
 }
 .services-list .icon i {
   font-size: 5.4rem;
-  color: #FF0077;
+  color: #fbe094;
 }
 .services-list h3 {
   color: #FFFFFF;
@@ -3663,7 +3663,7 @@ header .logo a {
   background: #FFFFFF;
 }
 .owl-theme .owl-controls .owl-page.active span {
-  background: #FF0077;
+  background: #fbe094;
 }
 /**
  * ===================================================================
@@ -3744,7 +3744,7 @@ header .logo a {
   color: white;
 }
 #contact .section-intro h5 {
-  color: #FF0077;
+  color: #fbe094;
 }
 #contact .section-intro p {
   color: rgba(255, 255, 255, 0.7);
@@ -3797,7 +3797,7 @@ header .logo a {
   padding: 0 2rem;
   margin: 0;
   color: #FFFFFF;
-  background: #FF0077;
+  background: #fbe094;
 }
 #contact form .form-field label::after {
   position: absolute;
@@ -3806,7 +3806,7 @@ header .logo a {
   margin-top: -6px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid #FF0077;
+  border-right: 5px solid #fbe094;
   content: "";
 }
 #contact input[type="text"],
@@ -3828,7 +3828,7 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
-  border-color: #FF0077;
+  border-color: #fbe094;
   color: #FFFFFF;
 }
 #contact textarea {
@@ -3836,7 +3836,7 @@ header .logo a {
   padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
-  border-color: #FF0077;
+  border-color: #fbe094;
   color: #FFFFFF;
 }
 #contact button.submitform {
@@ -3848,12 +3848,12 @@ header .logo a {
   padding: 0 3rem;
   margin-top: 4.8rem;
   width: 100%;
-  background: #FF0077;
+  background: #fbe094;
   color: #FFFFFF;
 }
 #contact button.submitform:hover,
 #contact button.submitform:focus {
-  background: #cc005f;
+  background: #fbe094;
 }
 #message-warning,
 #message-success {
@@ -3868,7 +3868,7 @@ header .logo a {
   color: #fa0003;
 }
 #message-success {
-  color: #FF0077;
+  color: #fbe094;
 }
 #message-warning i,
 #message-success i {
@@ -3913,7 +3913,7 @@ header .logo a {
   color: #FFFFFF;
 }
 .contact-info h5 {
-  color: #FF0077;
+  color: #fbe094;
 }
 /**
  * loader animation - (_layout.scss)
@@ -3990,7 +3990,7 @@ footer a:visited {
 }
 footer a:hover,
 footer a:focus {
-  color: #FF0077;
+  color: #fbe094;
 }
 footer .row {
   max-width: 900px;
@@ -4066,7 +4066,7 @@ footer .copyright span:last-child::after {
   height: 6.6rem;
   width: 6rem;
   line-height: 6.6rem;
-  background: #cc005f;
+  background: #fbe094;
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;

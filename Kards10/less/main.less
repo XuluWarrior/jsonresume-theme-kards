@@ -1087,39 +1087,42 @@ header {
 	width: 100%;
 	min-height: 66px;
 	z-index: 600;
-}
-header .row {
-	position: relative;
-	min-height: 66px;
-}
-header .top-bar {
-	display: block;
-	background: #000000;
-	min-width: 220px;
-	min-height: 66px;
-	position: absolute;
-	left: 90px;
-	top: 0;
-}
-header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
-	position: relative;
-}
-header .logo a {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: none;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	width: 92px;
-	height: 15px;
-	background: url(@logo-img-url) no-repeat center;
-	background-size: 92px 15px;
+
+    .row {
+        position: relative;
+        min-height: 66px;
+    }
+    .top-bar {
+        display: block;
+        background: #000000;
+        min-width: 220px;
+        min-height: 66px;
+        position: absolute;
+        left: 90px;
+        top: 0;
+    }
+
+    .logo {
+        float: left;
+        margin-left: 20px;
+        margin-right: 50px;
+        margin-top: 25px;
+        position: relative;
+
+        a {
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font: 0/0 a;
+            text-shadow: none;
+            color: transparent;
+            width: 92px;
+            height: 15px;
+            background: url(@logo-img-url) no-repeat center;
+            background-size: 92px 15px;
+        }
+    }
 }
 
 /**
