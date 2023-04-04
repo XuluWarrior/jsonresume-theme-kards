@@ -1305,6 +1305,7 @@ header .logo a {
 	position: relative;
 	text-align: center;
 }
+
 .intro-overlay {
 	position: absolute;
 	top: 0;
@@ -1322,78 +1323,87 @@ header .logo a {
 	-webkit-transform: translateY(-2.1rem);
 	-ms-transform: translateY(-2.1rem);
 	transform: translateY(-2.1rem);
-}
-.intro-content h1 {
-	color: #FFFFFF;
-	font-family: "poppins-medium", sans-serif;
-	font-size: 8.4rem;
-	line-height: 1.071;
-	max-width: 900px;
-	margin-top: 0;
-	margin-bottom: .6rem;
-	margin-left: auto;
-	margin-right: auto;
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-.intro-content h5 {
-	color: @primary-accent-color-darkened;
-	font-family: "poppins-bold", sans-serif;
-	font-size: 2.3rem;
-	line-height: 1.565;
-	margin-bottom: 0;
-	text-transform: uppercase;
-	letter-spacing: .3rem;
-	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-.intro-content .intro-position {
-	font-family: "lora-regular", serif;
-	font-size: 1.7rem;
-	line-height: 2.4rem;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	color: #FFFFFF;
-	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-.intro-content .intro-position span {
-	display: inline-block;
-}
-.intro-content .intro-position span::after {
-	content: "|";
-	text-align: center;
-	display: inline-block;
-	padding: 0 8px 0 14px;
-	color: rgba(255, 255, 255, 0.3);
-}
-.intro-content .intro-position span:first-child::before {
-	content: "|";
-	text-align: center;
-	display: inline-block;
-	padding: 0 14px 0 8px;
-	color: rgba(255, 255, 255, 0.3);
-}
-.intro-content .button {
-	color: #FFFFFF !important;
-	border-color: rgba(255, 255, 255, 0.3);
-	height: 6rem !important;
-	line-height: 5.4rem !important;
-	padding: 0 3.5rem 0 3rem !important;
-	margin-top: .6rem;
-	font-size: 1.3rem;
-	text-transform: uppercase;
-	letter-spacing: .25rem;
-}
-.intro-content .button:hover, .intro-content .button:focus {
-	border-color: @primary-accent-color-darkened;
-}
-.intro-content .button::after {
-	display: inline-block;
-	content: "\f107";
-	font-family: fontAwesome;
-	font-size: 1.6rem;
-	line-height: inherit;
-	text-align: center;
-	position: relative;
-	left: 1.2rem;
+
+    h1 {
+        color: #FFFFFF;
+        font-family: "poppins-medium", sans-serif;
+        font-size: 8.4rem;
+        line-height: 1.071;
+        max-width: 900px;
+        margin-top: 0;
+        margin-bottom: .6rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h5 {
+        color: @primary-accent-color-darkened;
+        font-family: "poppins-bold", sans-serif;
+        font-size: 2.3rem;
+        line-height: 1.565;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .intro-position {
+        font-family: "lora-regular", serif;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        color: #FFFFFF;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+        span {
+            display: inline-block;
+
+            &::after {
+                content: "|";
+                text-align: center;
+                display: inline-block;
+                padding: 0 8px 0 14px;
+                color: rgba(255, 255, 255, 0.3);
+            }
+
+            &:first-child::before {
+                content: "|";
+                text-align: center;
+                display: inline-block;
+                padding: 0 14px 0 8px;
+                color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .button {
+        color: #FFFFFF !important;
+        border-color: rgba(255, 255, 255, 0.3);
+        height: 6rem !important;
+        line-height: 5.4rem !important;
+        padding: 0 3.5rem 0 3rem !important;
+        margin-top: .6rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+
+        &:hover, .intro-content .button:focus {
+            border-color: @primary-accent-color-darkened;
+        }
+
+        &::after {
+            display: inline-block;
+            content: "\f107";
+            font-family: fontAwesome;
+            font-size: 1.6rem;
+            line-height: inherit;
+            text-align: center;
+            position: relative;
+            left: 1.2rem;
+        }
+    }
 }
 
 .intro-social {
