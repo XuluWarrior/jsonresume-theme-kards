@@ -3964,11 +3964,13 @@ header .top-bar {
  * -------------------------------------------------------------------
  */
 footer {
-  padding-bottom: 3rem;
+  padding: 1rem 0 3rem 0;
   font-size: 1.4rem;
   font-family: "poppins-regular", sans-serif;
 }
-footer a,
+footer a {
+  color: #ffffff;
+}
 footer a:visited {
   color: #ffffff;
 }
@@ -3978,9 +3980,6 @@ footer a:focus {
 }
 footer .row {
   max-width: 900px;
-}
-footer .social {
-  text-align: right;
 }
 footer .footer-social {
   display: inline-block;
