@@ -2510,46 +2510,57 @@ footer {
 	padding-bottom: 3rem;
 	font-size: 1.4rem;
 	font-family: "poppins-regular", sans-serif;
-}
-footer a, footer a:visited {
-	color: @tertiary-text-color;
-}
-footer a:hover, footer a:focus {
-	color: @primary-accent-color;
-}
-footer .row {
-	max-width: 900px;
-}
-footer .social {
-	text-align: right;
-}
-footer .footer-social {
-	display: inline-block;
-	font-size: 2.1rem;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	top: -.3rem;
-}
-footer .footer-social li {
-	display: inline-block;
-	margin: 0 12px;
-	padding: 0;
-}
-footer .footer-social li a {
-	color: @tertiary-text-color;
-}
-footer .copyright span {
-	display: inline-block;
-}
-footer .copyright span::after {
-	content: "|";
-	display: inline-block;
-	padding: 0 1rem 0 1.2rem;
-	color: rgba(255, 255, 255, 0.1);
-}
-footer .copyright span:last-child::after {
-	display: none;
+
+    a {
+        color: @tertiary-text-color;
+
+        &:visited {
+            color: @tertiary-text-color;
+        }
+
+        &:hover,
+        &:focus {
+            color: @primary-accent-color;
+        }
+    }
+
+    .row {
+        max-width: 900px;
+    }
+
+    .footer-social {
+        display: inline-block;
+        font-size: 2.1rem;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -.3rem;
+
+        li {
+            display: inline-block;
+            margin: 0 12px;
+            padding: 0;
+
+            a {
+                color: @tertiary-text-color;
+            }
+        }
+    }
+
+    .copyright span {
+        display: inline-block;
+
+        &::after {
+            content: "|";
+            display: inline-block;
+            padding: 0 1rem 0 1.2rem;
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
 }
 
 /**
@@ -2560,18 +2571,21 @@ footer .copyright span:last-child::after {
 @media only screen and (max-width:768px) {
 	footer {
 		text-align: center;
-	}
-	footer .social {
-		display: block;
-		width: 100%;
-		text-align: center;
-		margin-bottom: 1.5rem;
-	}
-	footer .copyright span {
-		display: block;
-	}
-	footer .copyright span::after {
-		display: none;
+
+        .social {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .copyright span {
+            display: block;
+
+            &::after {
+                display: none;
+            }
+        }
 	}
 }
 
