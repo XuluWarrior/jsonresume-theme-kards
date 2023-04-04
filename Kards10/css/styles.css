@@ -2706,7 +2706,7 @@ header .logo a {
 }
 .menu-toggle.is-clicked span::before,
 .menu-toggle.is-clicked span::after {
-  background-color: #ff0077;
+  background-color: #FF0077;
   -moz-transition-delay: 0s, 0.2s;
   -o-transition-delay: 0s, 0.2s;
   -webkit-transition-delay: 0s, 0.2s;
