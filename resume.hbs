@@ -243,6 +243,53 @@
         </div> <!-- /resume-timeline -->
     {{/if}}
 
+    {{#if resume.projects}}
+        <div class="row resume-timeline">
+
+            <div class="col-twelve resume-header">
+
+                <h2>Projects</h2>
+
+            </div> <!-- /resume-header -->
+
+            <div class="col-twelve">
+
+                <div class="timeline-wrap">
+
+                    {{#each resume.projects}}
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3>{{name}}</h3>
+                                {{#if roles}}
+                                    <ul class="timeline-project-roles">
+                                        {{#each roles}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                                <p>{{date startDate}} - {{date endDate}}</p>
+                            </div>
+
+                            <div class="timeline-content">
+                                <h4>{{entity}}</h4>
+                                <p>{{description}}</p>
+                            </div>
+
+                        </div> <!-- /timeline-block -->
+                    {{/each}}
+
+                </div> <!-- /timeline-wrap -->
+
+            </div> <!-- /col-twelve -->
+
+        </div> <!-- /resume-timeline -->
+    {{/if}}
+
     {{#if resume.volunteer}}
         <div class="row resume-timeline">
 
