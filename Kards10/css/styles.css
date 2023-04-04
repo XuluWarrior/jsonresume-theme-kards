@@ -3112,7 +3112,7 @@ header .top-bar {
   color: #f1bcc8;
 }
 #resume .resume-timeline {
-  max-width: 980px;
+  max-width: 1080px;
 }
 #resume .timeline-wrap {
   position: relative;
@@ -3196,6 +3196,9 @@ header .top-bar {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+#resume .timeline-content p {
+  text-align: justify;
 }
 /**
  * responsive:
