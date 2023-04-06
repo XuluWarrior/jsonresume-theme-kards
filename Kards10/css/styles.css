@@ -1579,6 +1579,11 @@ h1,
   line-height: 1.355;
   letter-spacing: -0.1rem;
 }
+h2,
+h3,
+h5 {
+  text-transform: uppercase;
+}
 @media only screen and (max-width: 600px) {
   h1,
   .h01 {
@@ -2616,7 +2621,7 @@ header .top-bar {
   min-width: 80px;
   min-height: 66px;
   position: absolute;
-  left: 90px;
+  left: 0;
   top: 0;
 }
 /**
@@ -2905,7 +2910,7 @@ header .top-bar {
 }
 .intro-social li a:hover,
 .intro-social li a:focus {
-  color: #f1bcc8;
+  color: #fbe094;
 }
 /**
  * responsive:
@@ -3106,8 +3111,8 @@ header .top-bar {
  * -------------------------------------------------------------------
  */
 #resume {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
 }
 #resume .resume-header {
   text-align: center;
@@ -3128,7 +3133,7 @@ header .top-bar {
   display: block;
   width: 1px;
   height: 100%;
-  background: #fffcf6;
+  background: #a1a1a1;
   position: absolute;
   left: 35%;
   top: 0;
@@ -3162,6 +3167,7 @@ header .top-bar {
   text-align: right;
 }
 #resume .timeline-header h3 {
+  text-transform: none;
   margin-bottom: 0;
 }
 #resume .timeline-header p {
@@ -3192,17 +3198,53 @@ header .top-bar {
   padding-bottom: 1.8rem;
 }
 #resume .timeline-content h4::after {
-  content: "";
+  content: '';
   display: block;
-  height: 3px;
-  width: 50px;
-  background: #f1bcc8;
+  height: 1px;
+  width: 100%;
+  background: #a1a1a1;
   position: absolute;
   left: 0;
   bottom: 0;
 }
+#resume .timeline-content h4 a,
+#resume .timeline-content h4 a:link {
+  color: #fbe094;
+}
+#resume .timeline-content h4 a:hover,
+#resume .timeline-content h4 a:focus {
+  color: #fffcf6;
+}
 #resume .timeline-content p {
   text-align: justify;
+}
+#resume .timeline-highlights {
+  margin-left: 35%;
+  color: #a1a1a1;
+  list-style: none;
+}
+#resume .timeline-highlights li::before {
+  position: absolute;
+  content: '\f111';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 13px;
+  margin-left: -10px;
+}
+#resume .timeline-highlights li p {
+  display: inline-block;
+  padding-left: 50px;
+  color: #ffffff;
+}
+#resume .timeline-highlights li p a,
+#resume .timeline-highlights li p a:link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+#resume .timeline-highlights li p a:hover,
+#resume .timeline-highlights li p a:focus {
+  text-decoration: none;
+  color: #fbe094;
 }
 /**
  * responsive:
@@ -4002,6 +4044,10 @@ footer .footer-social li {
 }
 footer .footer-social li a {
   color: #ffffff;
+}
+footer .footer-social li a:hover,
+footer .footer-social li a:focus {
+  color: #fbe094;
 }
 footer .copyright span {
   display: inline-block;

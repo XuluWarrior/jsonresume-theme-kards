@@ -228,6 +228,14 @@
                                 <p>{{#markdown}}{{summary}}{{/markdown}}</p>
                             </div>
 
+                            {{#if highlights}}
+                            <ul class="timeline-highlights">
+                                {{#each highlights}}
+                                    <li><p>{{#markdown}}{{this}}{{/markdown}}</p></li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+
                         </div> <!-- /timeline-block -->
                     {{/each}}
 
