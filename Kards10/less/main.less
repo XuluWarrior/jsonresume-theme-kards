@@ -123,6 +123,11 @@ h1, .h01 {
 	line-height: 1.355;
 	letter-spacing: -.1rem;
 }
+
+h2, h3, h5 {
+    text-transform: uppercase;
+}
+
 @media only screen and (max-width:600px) {
 	h1, .h01 {
 		font-size: 2.6rem;
@@ -1106,7 +1111,7 @@ header {
         min-width: 80px;
         min-height: 66px;
         position: absolute;
-        left: 90px;
+        left: 0;
         top: 0;
     }
 }
@@ -1617,8 +1622,8 @@ header {
  * -------------------------------------------------------------------
  */
 #resume {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding-top: 16rem;
+	padding-bottom: 16rem;
 }
 
 #resume .resume-header {
@@ -1641,7 +1646,7 @@ header {
 	display: block;
 	width: 1px;
 	height: 100%;
-	background: @secondary-text-color;
+	background: @muted-text-color;
 	position: absolute;
 	left: 35%;
 	top: 0;
@@ -1674,32 +1679,35 @@ header {
 	width: 35%;
 	padding-right: 90px;
 	text-align: right;
-}
-#resume .timeline-header h3 {
-	margin-bottom: 0;
-}
-#resume .timeline-header p {
-	font-family: "poppins-regular", sans-serif;
-	font-size: 1.6rem;
-	color: @secondary-text-color;
-}
 
-#resume .timeline-header .timeline-project-roles {
-    list-style-type: none;
-    margin-bottom: 0;
-    font-weight: bold;
+    h3 {
+        text-transform: none;
+        margin-bottom: 0;
+    }
 
-    li {
-        display: inline;
+    p {
+        font-family: "poppins-regular", sans-serif;
+        font-size: 1.6rem;
+        color: @secondary-text-color;
+    }
 
-        &:after {
-            content: ', ';
+    .timeline-project-roles {
+        list-style-type: none;
+        margin-bottom: 0;
+        font-weight: bold;
+
+        li {
+            display: inline;
+
+            &:after {
+                content: ', ';
+            }
+
+            &:last-child:after {
+                content: '';
+            }
         }
-
-        &:last-child:after {
-            content: '';
-        }
-}
+    }
 }
 
 #resume .timeline-content {
@@ -1711,11 +1719,11 @@ header {
         padding-bottom: 1.8rem;
 
         &::after {
-            content: "";
+            content: '';
             display: block;
-            height: 3px;
-            width: 50px;
-            background: @secondary-accent-color;
+            height: 1px;
+            width: 100%;
+            background: @muted-text-color;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -2549,6 +2557,10 @@ footer {
 
             a {
                 color: @tertiary-text-color;
+            }
+
+            a:hover, a:focus {
+                color: @primary-accent-color;
             }
         }
     }
