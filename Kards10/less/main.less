@@ -1405,17 +1405,20 @@ header {
 	font-size: 2.5rem;
 	margin: 0;
 	padding: 0;
-}
-.intro-social li {
-	display: inline-block;
-	margin: 0 20px;
-	padding: 0;
-}
-.intro-social li a, .intro-social li a:visited {
-	color: @tertiary-text-color;
-}
-.intro-social li a:hover, .intro-social li a:focus {
-	color: @secondary-accent-color;
+
+    li {
+        display: inline-block;
+        margin: 0 20px;
+        padding: 0;
+
+        a, a:visited {
+            color: @tertiary-text-color;
+        }
+
+        a:hover, a:focus {
+            color: @primary-accent-color;
+        }
+    }
 }
 
 /**
