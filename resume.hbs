@@ -85,7 +85,7 @@
 
         <ul class="intro-social">
             {{#each profiles}}
-                <li><a href="{{url}}"><i class="fa-brands fa-lg fa-{{toLowerCase network}}"></i></a></li>
+                <li><a href="{{url}}" rel="me"><i class="fa-brands fa-lg fa-{{toLowerCase network}}"></i></a></li>
             {{/each}}
         </ul> <!-- /intro-social -->
 
@@ -1040,6 +1040,7 @@
 ================================================== -->
 
 <footer>
+    {{#resume.basics}}
     <div class="row">
 
         <div class="col-six tab-full pull-right social">
@@ -1054,7 +1055,7 @@
 
         <div class="col-six tab-full">
             <div class="copyright">
-                <span>{{#resume.basics}}{{name}}{{/resume.basics}} © {{now 'YYYY'}}.</span>
+                <span>{{name}} © {{now 'YYYY'}}.</span>
                 <span>Original design by <a href="http://www.styleshout.com/">styleshout</a>.</span>
             </div>
         </div>
@@ -1064,6 +1065,7 @@
         </div>
 
     </div> <!-- /row -->
+    {{/resume.basics}}
 </footer>
 
 <!--<div id="preloader">
