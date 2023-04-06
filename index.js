@@ -102,6 +102,8 @@ function fixResume(resume) {
 	fixAllEntries(resume.publications);
 	fixAllEntries(resume.projects);
 
+    resume.publications = sort(resume.publications, false, p => p.releaseDate);
+
 	fixWork(resume.work);
 }
 
@@ -129,6 +131,23 @@ function fixWork(work) {
 		}
 
 	}
+}
+
+function sort(array, ascending, field) {
+    return array.sort((a, b) => {
+        af = field(a);
+        bf = field(b);
+
+        if (af < bf) {
+            return ascending ? -1 : 1;
+        }
+
+        if (af > bf) {
+            return ascending ? 1 : -1;
+        }
+
+        return 0;
+    });
 }
 
 function render(resume) {
