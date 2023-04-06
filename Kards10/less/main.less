@@ -1638,26 +1638,44 @@ header {
 
 #resume .resume-timeline {
 	max-width: 1080px;
+
+    p {
+        color: @tertiary-text-color;
+
+        a, a:link {
+            text-decoration: underline;
+            color: @tertiary-text-color;
+        }
+
+        a:hover, a:focus {
+            text-decoration: none;
+            color: @primary-accent-color;
+        }
+    }
 }
+
 #resume .timeline-wrap {
 	position: relative;
 	margin-top: 1.5rem;
 	margin-bottom: 6rem;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: @muted-text-color;
+        position: absolute;
+        left: 35%;
+        top: 0;
+    }
 }
-#resume .timeline-wrap::before {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 100%;
-	background: @muted-text-color;
-	position: absolute;
-	left: 35%;
-	top: 0;
-}
+
 #resume .timeline-block {
 	position: relative;
 	padding-top: 1.5rem;
 }
+
 #resume .timeline-ico {
 	height: 4.8rem;
 	width: 4.8rem;
@@ -1670,11 +1688,12 @@ header {
 	left: 35%;
 	top: .9rem;
 	margin-left: -2.4rem;
-}
-#resume .timeline-ico i {
-	position: relative;
-	left: .05rem;
-	top: .2rem;
+
+    i {
+        position: relative;
+        left: .05rem;
+        top: .2rem;
+    }
 }
 
 #resume .timeline-header {
@@ -1764,17 +1783,6 @@ header {
         p {
             display: inline-block;
             padding-left: 50px;
-            color: @tertiary-text-color;
-
-            a, a:link {
-                text-decoration: underline;
-                color: @tertiary-text-color;
-            }
-
-            a:hover, a:focus {
-                text-decoration: none;
-                color: @primary-accent-color;
-            }
         }
     }
 }

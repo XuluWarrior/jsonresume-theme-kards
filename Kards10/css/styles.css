@@ -3123,6 +3123,19 @@ header .top-bar {
 #resume .resume-timeline {
   max-width: 1080px;
 }
+#resume .resume-timeline p {
+  color: #ffffff;
+}
+#resume .resume-timeline p a,
+#resume .resume-timeline p a:link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+#resume .resume-timeline p a:hover,
+#resume .resume-timeline p a:focus {
+  text-decoration: none;
+  color: #fbe094;
+}
 #resume .timeline-wrap {
   position: relative;
   margin-top: 1.5rem;
@@ -3234,17 +3247,6 @@ header .top-bar {
 #resume .timeline-highlights li p {
   display: inline-block;
   padding-left: 50px;
-  color: #ffffff;
-}
-#resume .timeline-highlights li p a,
-#resume .timeline-highlights li p a:link {
-  text-decoration: underline;
-  color: #ffffff;
-}
-#resume .timeline-highlights li p a:hover,
-#resume .timeline-highlights li p a:focus {
-  text-decoration: none;
-  color: #fbe094;
 }
 /**
  * responsive:
