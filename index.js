@@ -112,6 +112,7 @@ function fixResume(resume) {
 	fixAllEntries(resume.publications);
 	fixAllEntries(resume.projects);
 
+    resume.volunteer = sort(resume.volunteer, false, v => v.startDate);
     resume.publications = sort(resume.publications, false, p => p.releaseDate);
 
 	fixWork(resume.work);
