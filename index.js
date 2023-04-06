@@ -6,11 +6,11 @@ var marked = require('marked').marked;
 var moment = require('moment');
 
 Handlebars.registerHelper('markdown', function(str, locals, options) {
-	if (typeof str !== 'string') {
+    if (typeof str !== 'string') {
 		options = locals;
 		locals = str;
 		str = true;
-	}
+ 	}
 
 	if (utils.isOptions(locals)) {
 		options = locals;
@@ -44,6 +44,24 @@ Handlebars.registerHelper('date', function(str) {
 	} else {
 		return "Present"
 	}
+});
+
+Handlebars.registerHelper('now', function(context) {
+    const format = context;
+    const date = new Date();
+    const pad2 = (n) => n.toString().padStart(2, '0');
+
+    // TODO: Rewrite to use moment.js
+    const map = {
+      YYYY: date.getFullYear(),
+      MM: pad2(date.getMonth() + 1),
+      DD: pad2(date.getDate()),
+      hh: pad2(date.getHours()),
+      mm: pad2(date.getMinutes()),
+      ss: pad2(date.getSeconds()),
+    };
+
+    return Object.entries(map).reduce((prev, entry) => prev.replace(...entry), format);
 });
 
 Handlebars.registerHelper('award', function(str) {
@@ -137,23 +155,6 @@ function render(resume) {
 	//});
 
 	const packageJSON = require("./package");
-
-    Handlebars.registerHelper('now', function(context) {
-        const format = context;
-        const date = new Date();
-        const pad2 = (n) => n.toString().padStart(2, '0');
-
-        const map = {
-          YYYY: date.getFullYear(),
-          MM: pad2(date.getMonth() + 1),
-          DD: pad2(date.getDate()),
-          hh: pad2(date.getHours()),
-          mm: pad2(date.getMinutes()),
-          ss: pad2(date.getSeconds()),
-        };
-
-        return Object.entries(map).reduce((prev, entry) => prev.replace(...entry), format);
-    });
 
     return Handlebars.compile(tpl)({
 		css: css,
