@@ -1746,6 +1746,39 @@ header {
     }
 }
 
+#resume .timeline-highlights {
+	margin-left: 35%;
+    color: @muted-text-color;
+    list-style: none;
+
+    li {
+        &::before {
+            position: absolute;
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 13px;
+            margin-left: -10px;
+        }
+
+        p {
+            display: inline-block;
+            padding-left: 50px;
+            color: @tertiary-text-color;
+
+            a, a:link {
+                text-decoration: underline;
+                color: @tertiary-text-color;
+            }
+
+            a:hover, a:focus {
+                text-decoration: none;
+                color: @primary-accent-color;
+            }
+        }
+    }
+}
+
 /**
  * responsive:
  * resume

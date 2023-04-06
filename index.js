@@ -20,7 +20,17 @@ Handlebars.registerHelper('markdown', function(str, locals, options) {
 	var ctx = utils.context(this, locals, options);
 	var val = utils.value(str, ctx, options);
 
-	var markup = marked(val);
+    // Convert wonky string-objects to actual strings
+    if (val === '[object Object]' && typeof ctx === 'object') {
+        const values = Object.values(ctx);
+
+        // Only do the conversion if every value of the object is a string.
+        if (values.every(v => typeof v === 'string')) {
+            val = Object.values(ctx).join('');
+        }
+    }
+
+    var markup = marked(val);
 
 	// If we end up with a string wrapped in one <p> block, remove it so we don't create a new text block
 	var startEndMatch = markup.match(/^<p>(.*)<\/p>\n$/);
