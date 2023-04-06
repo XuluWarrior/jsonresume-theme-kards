@@ -219,12 +219,12 @@
                             </div>
 
                             <div class="timeline-header">
-                                <h3>{{position}}</h3>
+                                <h3>{{name}}</h3>
                                 <p>{{date startDate}} - {{date endDate}}</p>
                             </div>
 
                             <div class="timeline-content">
-                                <h4>{{name}}</h4>
+                                <h4>{{position}}</h4>
                                 <p>{{#markdown}}{{summary}}{{/markdown}}</p>
                             </div>
 
@@ -348,12 +348,17 @@
                             </div>
 
                             <div class="timeline-header">
-                                <h3>{{name}}</h3>
+                                <h3>{{publisher}}</h3>
                                 <p>{{date releaseDate}}</p>
                             </div>
 
                             <div class="timeline-content">
-                                <h4>{{publisher}}</h4>
+                                <h4>
+                                    <a href="{{url}}" target="_blank">
+                                        <span>{{name}}</span>
+                                        <i class="fa-regular fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </h4>
                                 <p>{{#markdown}}{{summary}}{{/markdown}}</p>
                             </div>
 
