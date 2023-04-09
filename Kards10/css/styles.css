@@ -3176,7 +3176,7 @@ header .top-bar {
 #resume .timeline-header {
   float: left;
   width: 35%;
-  padding-right: 90px;
+  padding-right: 60px;
   text-align: right;
 }
 #resume .timeline-header h3 {
@@ -3239,7 +3239,7 @@ header .top-bar {
 #resume .timeline-highlights li::before {
   position: absolute;
   content: '\f111';
-  font-family: 'Font Awesome 6 Free';
+  font-family: fontAwesome;
   font-weight: 900;
   font-size: 13px;
   margin-left: -10px;
@@ -4906,3 +4906,101 @@ img.mfp-img {
   padding-top: 0;
 }
 /*# sourceMappingURL=vendor.css.map */
+@media print {
+  header {
+    display: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000 !important;
+  }
+  p {
+    color: #222 !important;
+  }
+  .row {
+    width: 100%;
+  }
+  [class*="col-"] {
+    padding: 0;
+  }
+  #intro {
+    height: auto;
+    min-height: auto;
+  }
+  #intro h1 {
+    visibility: hidden;
+    text-shadow: none;
+  }
+  #intro h1 .name {
+    display: block;
+    visibility: visible;
+    width: 100%;
+    text-align: center;
+    font-size: 2cm;
+    color: #000;
+  }
+  #intro h5,
+  #intro .button,
+  #intro .intro-social {
+    display: none;
+  }
+  #intro .intro-position {
+    text-shadow: none;
+    color: #666;
+    text-transform: none;
+    font-size: 4mm;
+  }
+  #intro .intro-position span::before,
+  #intro .intro-position span::after {
+    content: '';
+  }
+  #about {
+    border-top: none;
+    padding-top: 0;
+  }
+  #about h5,
+  #about h1,
+  #about .button-section {
+    display: none;
+  }
+  #about .about-content {
+    width: auto;
+    max-width: auto;
+  }
+  #about .skill-bars li {
+    print-color-adjust: exact;
+  }
+  #about .skill-bars li strong {
+    color: #000;
+  }
+  #about .skill-bars li .progress {
+    print-color-adjust: exact;
+    background-color: #000;
+  }
+  #resume {
+    break-before: page;
+  }
+  #resume .resume-timeline {
+    max-width: auto;
+  }
+  #resume .resume-timeline .timeline-header {
+    width: 40%;
+  }
+  #resume .resume-timeline .timeline-wrap::before {
+    background-color: #ccc;
+    print-color-adjust: exact;
+  }
+  #resume .resume-timeline .timeline-highlights {
+    color: #ccc;
+  }
+  #resume .resume-timeline .timeline-block {
+    break-before: page;
+  }
+  footer {
+    display: none;
+  }
+}
