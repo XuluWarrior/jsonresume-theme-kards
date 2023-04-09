@@ -107,42 +107,33 @@ function fixResume(resume) {
 		resume.basics.url = resume.basics.website;
 		delete resume.basics.website
 	}
-	fixAllEntries(resume.work);
-	fixAllEntries(resume.volunteer);
-	fixAllEntries(resume.publications);
-	fixAllEntries(resume.projects);
+
+    fixEntries(resume.work);
+	fixEntries(resume.volunteer);
+	fixEntries(resume.publications);
+	fixEntries(resume.projects);
 
     resume.work = sort(resume.work, false, w => w.startDate);
     resume.volunteer = sort(resume.volunteer, false, v => v.startDate);
     resume.publications = sort(resume.publications, false, p => p.releaseDate);
     resume.projects = sort(resume.projects, false, p => p.startDate);
-
-	fixWork(resume.work);
 }
 
-function fixAllEntries(entries) {
+function fixEntries(entries) {
 	if (entries) {
-		for (var i=0; i < entries.length; i++) {
+		for (var i = 0; i < entries.length; i++) {
 			var entry = entries[i];
-			if (entry.website) {
+
+            if (entry.website) {
 				entry.url = entry.website;
 				delete entry.website;
 			}
-		}
-	}
-}
 
-// work.company has been renamed as work.name in v1.0.0
-function fixWork(work) {
-	if (work) {
-		for (var i=0; i < work.length; i++) {
-			var entry = work[i];
 			if (entry.company) {
 				entry.name = entry.company;
 				delete entry.company;
 			}
-		}
-
+        }
 	}
 }
 
