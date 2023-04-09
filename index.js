@@ -162,7 +162,7 @@ function sort(array, ascending, field) {
 }
 
 function render(resume) {
-	var css = fs.readFileSync(__dirname + "/Kards10/css/styles.css", "utf-8");
+    var css = fs.readFileSync(__dirname + "/Kards10/css/styles.css", "utf-8");
 	var mainJs = fs.readFileSync(__dirname + "/Kards10/js/main.js", "utf-8");
 	var pluginsJs = fs.readFileSync(__dirname + "/Kards10/js/plugins.js", "utf-8");
 	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
@@ -199,5 +199,16 @@ function render(resume) {
 }
 
 module.exports = {
-	render: render
+	render: render,
+	pdfRenderOptions: {
+		format: 'A4',
+		mediaType: 'print',
+		pdfViewport: { width: 1920, height: 1280 },
+		margin: {
+			top: '1cm',
+			bottom: '1cm',
+			left: '1cm',
+			right: '1cm',
+		},
+	},
 };
