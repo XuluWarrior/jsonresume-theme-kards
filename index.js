@@ -137,7 +137,7 @@ function fixWork(work) {
 			var entry = work[i];
 			if (entry.company) {
 				entry.name = entry.company;
-				delete entry.website;
+				delete entry.company;
 			}
 		}
 
