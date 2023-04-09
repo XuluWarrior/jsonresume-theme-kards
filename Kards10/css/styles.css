@@ -3179,7 +3179,7 @@ header .top-bar {
   padding-right: 60px;
   text-align: right;
 }
-#resume .timeline-header h3 {
+#resume .timeline-header h4 {
   text-transform: none;
   margin-bottom: 0;
 }
@@ -3206,11 +3206,12 @@ header .top-bar {
   margin-left: 35%;
   padding-left: 60px;
 }
-#resume .timeline-content h4 {
+#resume .timeline-content h3 {
   position: relative;
+  text-transform: none;
   padding-bottom: 1.8rem;
 }
-#resume .timeline-content h4::after {
+#resume .timeline-content h3::after {
   content: '';
   display: block;
   height: 1px;
@@ -3220,12 +3221,12 @@ header .top-bar {
   left: 0;
   bottom: 0;
 }
-#resume .timeline-content h4 a,
-#resume .timeline-content h4 a:link {
+#resume .timeline-content h3 a,
+#resume .timeline-content h3 a:link {
   color: #fbe094;
 }
-#resume .timeline-content h4 a:hover,
-#resume .timeline-content h4 a:focus {
+#resume .timeline-content h3 a:hover,
+#resume .timeline-content h3 a:focus {
   color: #fffcf6;
 }
 #resume .timeline-content p {
