@@ -1,0 +1,113 @@
+@media print {
+    header {
+        display: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+    }
+
+    p {
+        color: #222 !important;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        padding: 0;
+    }
+
+    #intro {
+        height: auto;
+        min-height: auto;
+
+        h1 {
+            visibility: hidden;
+            text-shadow: none;
+
+            .name {
+                display: block;
+                visibility: visible;
+                width: 100%;
+                text-align: center;
+                font-size: 2cm;
+                color: #000;
+            }
+        }
+
+        h5, .button, .intro-social {
+            display: none;
+        }
+
+        .intro-position {
+            text-shadow: none;
+            color: #666;
+            text-transform: none;
+            font-size: 4mm;
+
+            span {
+                &::before, &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    #about {
+        border-top: none;
+        padding-top: 0;
+
+        h5, h1, .button-section {
+            display: none;
+        }
+
+        .about-content {
+            width: auto;
+            max-width: auto;
+        }
+
+        .skill-bars li {
+            print-color-adjust: exact;
+
+            strong {
+                color: #000;
+            }
+
+            .progress {
+                print-color-adjust: exact;
+                background-color: #000;
+            }
+        }
+    }
+
+    #resume {
+        break-before: page;
+
+        .resume-timeline {
+            max-width: auto;
+
+            .timeline-header {
+                width: 40%;
+            }
+
+            .timeline-wrap::before {
+                background-color: #ccc;
+                print-color-adjust: exact;
+            }
+
+            .timeline-highlights {
+                color: #ccc;
+            }
+
+            .timeline-block {
+                break-before: page;
+            }
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
