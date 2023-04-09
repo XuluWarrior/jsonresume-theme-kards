@@ -114,6 +114,7 @@ function fixResume(resume) {
 
     resume.volunteer = sort(resume.volunteer, false, v => v.startDate);
     resume.publications = sort(resume.publications, false, p => p.releaseDate);
+    resume.projects = sort(resume.projects, false, p => p.startDate);
 
 	fixWork(resume.work);
 }
