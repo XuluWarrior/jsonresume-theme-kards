@@ -124,6 +124,15 @@ function fixEntries(entries) {
 		for (var i = 0; i < entries.length; i++) {
 			var entry = entries[i];
 
+            for (var key in entry) {
+                const value = entry[key];
+                if (typeof value !== 'string') {
+                    continue;
+                }
+
+                entry[key] = value.replace('™️', '<sup>&trade;</sup>');
+            }
+
             if (entry.website) {
 				entry.url = entry.website;
 				delete entry.website;

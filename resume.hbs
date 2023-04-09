@@ -219,13 +219,13 @@
                             </div>
 
                             <div class="timeline-header">
-                                <h4>{{name}}</h4>
+                                <h4>{{{name}}}</h4>
                                 <p>{{date startDate}} - {{date endDate}}</p>
                             </div>
 
                             <div class="timeline-content">
                                 <h3>{{position}}</h3>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
                             </div>
 
                             {{#if highlights}}
@@ -279,8 +279,8 @@
                             </div>
 
                             <div class="timeline-content">
-                                <h3>{{name}}</h3>
-                                <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                                <h3>{{{name}}}</h3>
+                                <p>{{#markdown}}{{{description}}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -321,7 +321,7 @@
 
                             <div class="timeline-content">
                                 <h3>{{organization}}</h3>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -363,11 +363,11 @@
                             <div class="timeline-content">
                                 <h3>
                                     <a href="{{url}}" target="_blank">
-                                        <span>{{name}}</span>
+                                        <span>{{{name}}}</span>
                                         <i class="fa-regular fa-arrow-up-right-from-square"></i>
                                     </a>
                                 </h3>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
