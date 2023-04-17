@@ -271,7 +271,7 @@
                                 {{#if roles}}
                                     <ul class="timeline-project-roles">
                                         {{#each roles}}
-                                            <li>{{this}}</li>
+                                            <li>{{#markdown}}{{this}}{{/markdown}}</li>
                                         {{/each}}
                                     </ul>
                                 {{/if}}
