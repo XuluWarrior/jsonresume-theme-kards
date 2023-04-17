@@ -224,13 +224,6 @@ blockquote cite a, blockquote cite a:visited {
 	color: @secondary-text-color;
 	border: none;
 }
-abbr {
-	font-family: "poppins-bold", serif;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: .05rem;
-	color: @secondary-text-color;
-}
 var, kbd, samp, code, pre {
 	font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
@@ -261,7 +254,6 @@ del {
 	text-decoration: line-through;
 }
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted;
 	cursor: help;
 }
 mark {
@@ -1728,15 +1720,6 @@ header {
             &:last-child:after {
                 content: '';
             }
-
-            abbr {
-                font-family: inherit;
-                font-variant: normal;
-                text-transform: none;
-                letter-spacing: normal;
-                color: inherit;
-                border-bottom: none;
-            }
         }
     }
 }
@@ -1771,7 +1754,8 @@ header {
     }
 
     p {
-        text-align: justify;
+        font-weight: bold;
+        font-size: 2rem;
     }
 }
 
