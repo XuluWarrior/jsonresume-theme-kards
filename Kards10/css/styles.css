@@ -1,5 +1,5 @@
 /**
- * =================================================================== 
+ * ===================================================================
  *
  *  Kards v1.0 Base Stylesheet
  *  url: styleshout.com
@@ -11,13 +11,13 @@
  *  03. grid
  *  04. MISC
  *
- * =================================================================== 
+ * ===================================================================
  */
-/** 
+/**
  * ===================================================================
  * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 html {
@@ -64,9 +64,6 @@ a {
 a:active,
 a:hover {
   outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
 }
 b,
 strong {
@@ -200,11 +197,11 @@ td,
 th {
   padding: 0;
 }
-/** 
+/**
  * ===================================================================
  * 02. basic/base setup styles - (_basic.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 html {
   font-size: 62.5%;
@@ -231,7 +228,7 @@ button {
 }
 /**
  * Media - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 img,
 video {
@@ -240,7 +237,7 @@ video {
 }
 /**
  * Typography resets - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 div,
 dl,
@@ -298,7 +295,7 @@ li {
 }
 /**
  * links - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 a {
   text-decoration: none;
@@ -309,7 +306,7 @@ a img {
 }
 /**
  * inputs - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 fieldset {
   margin: 0;
@@ -329,11 +326,11 @@ textarea {
   -o-appearance: none;
   appearance: none;
 }
-/** 
+/**
  * ===================================================================
  * 03. grid - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 .row {
   width: 94%;
@@ -410,7 +407,7 @@ textarea {
 }
 /**
  * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 1024px) {
   .row .row {
@@ -423,7 +420,7 @@ textarea {
 }
 /**
  * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 768px) {
   .row {
@@ -461,7 +458,7 @@ textarea {
 }
 /**
  * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 600px) {
   .row {
@@ -490,7 +487,7 @@ textarea {
 }
 /**
  * small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 400px) {
   .row .row {
@@ -511,11 +508,11 @@ textarea {
     float: none;
   }
 }
-/** 
+/**
  * ===================================================================
  * block grids - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 [class*="block-"]:before,
 [class*="block-"]:after {
@@ -538,7 +535,7 @@ textarea {
   width: 50%;
 }
 /**
- * Clearing for block grid columns. Allow columns with 
+ * Clearing for block grid columns. Allow columns with
  * different heights to align properly.
  */
 .block-1-6 .bgrid:nth-child(6n+1),
@@ -549,7 +546,7 @@ textarea {
 }
 /**
  * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 1024px) {
   .block-s-1-6 .bgrid {
@@ -580,7 +577,7 @@ textarea {
 }
 /**
  * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 768px) {
   .block-tab-1-6 .bgrid {
@@ -611,7 +608,7 @@ textarea {
 }
 /**
  * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 600px) {
   .block-mob-1-6 .bgrid {
@@ -642,7 +639,7 @@ textarea {
 }
 /**
  * stack on small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width: 400px) {
   .stack .bgrid {
@@ -653,11 +650,11 @@ textarea {
     margin-right: 0;
   }
 }
-/** 
+/**
  * ===================================================================
  * 04. MISC  - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 /**
  * Clearing - (http://nicolasgallagher.com/micro-clearfix-hack/
@@ -671,7 +668,7 @@ textarea {
   clear: both;
 }
 /**
- * Misc Helper Styles 
+ * Misc Helper Styles
  */
 .hide {
   display: none;
@@ -1692,13 +1689,6 @@ blockquote cite a:visited {
   color: #fffcf6;
   border: none;
 }
-abbr {
-  font-family: "poppins-bold", serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  letter-spacing: 0.05rem;
-  color: #fffcf6;
-}
 var,
 kbd,
 samp,
@@ -1734,7 +1724,6 @@ del {
 }
 abbr[title],
 dfn[title] {
-  border-bottom: 1px dotted;
   cursor: help;
 }
 mark {
@@ -3202,14 +3191,6 @@ header .top-bar {
 #resume .timeline-header .timeline-project-roles li:last-child:after {
   content: '';
 }
-#resume .timeline-header .timeline-project-roles li abbr {
-  font-family: inherit;
-  font-variant: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  color: inherit;
-  border-bottom: none;
-}
 #resume .timeline-content {
   margin: 1rem 0 0 35%;
   padding-left: 60px;
@@ -3238,7 +3219,8 @@ header .top-bar {
   color: #fffcf6;
 }
 #resume .timeline-content p {
-  text-align: justify;
+  font-weight: bold;
+  font-size: 2rem;
 }
 #resume .timeline-highlights {
   margin-left: 35%;
