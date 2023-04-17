@@ -3153,7 +3153,7 @@ header .top-bar {
 }
 #resume .timeline-block {
   position: relative;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
 }
 #resume .timeline-ico {
   height: 4.8rem;
@@ -3165,7 +3165,7 @@ header .top-bar {
   color: #282828;
   position: absolute;
   left: 35%;
-  top: 0.9rem;
+  top: 3rem;
   margin-left: -2.4rem;
 }
 #resume .timeline-ico i {
@@ -3202,8 +3202,16 @@ header .top-bar {
 #resume .timeline-header .timeline-project-roles li:last-child:after {
   content: '';
 }
+#resume .timeline-header .timeline-project-roles li abbr {
+  font-family: inherit;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  color: inherit;
+  border-bottom: none;
+}
 #resume .timeline-content {
-  margin-left: 35%;
+  margin: 1rem 0 0 35%;
   padding-left: 60px;
 }
 #resume .timeline-content h3 {
