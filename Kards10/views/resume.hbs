@@ -44,12 +44,13 @@
             <a data-test="menu-toggle" class="menu-toggle" href="#"><span>Menu</span></a>
             <nav id="main-nav-wrap">
                 <ul class="main-navigation">
-                    <li class="current"><a data-test="intro-link" class="smoothscroll"  href="#intro" title="">Home</a></li>
-                    <li><a data-test="about-link" class="smoothscroll"  href="#about" title="">About</a></li>
-                    <li><a data-test="resume-link" class="smoothscroll"  href="#resume" title="">Resume</a></li>
-                    <!--<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>-->
-                    <!--<li><a class="smoothscroll"  href="#services" title="">Services</a></li>-->
-                    <!--<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>-->
+                    <li class="current"><a href="#intro">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#volunteer-work">Volunteer&nbsp;work</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#education">Education</a></li>
                 </ul>
             </nav>
         </div> <!-- /top-bar -->
@@ -199,7 +200,7 @@
     </article> <!-- /section-intro-->
 
     {{#if resume.work}}
-        <article class="row resume-timeline">
+        <article class="row resume-timeline" id="work">
             <div class="col-twelve resume-header">
                 <h2>Work Experience</h2>
             </div> <!-- /resume-header -->
@@ -227,7 +228,7 @@
     {{/if}}
 
     {{#if resume.projects}}
-        <article class="row resume-timeline">
+        <article class="row resume-timeline" id="projects">
             <div class="col-twelve resume-header">
                 <h2>Projects</h2>
             </div> <!-- /resume-header -->
@@ -256,7 +257,7 @@
     {{/if}}
 
     {{#if resume.volunteer}}
-        <article class="row resume-timeline">
+        <article class="row resume-timeline" id="volunteer-work">
             <div class="col-twelve resume-header">
                 <h2>Volunteer Work</h2>
             </div> <!-- /resume-header -->
@@ -284,7 +285,7 @@
     {{/if}}
 
     {{#if resume.publications}}
-        <article class="row resume-timeline">
+        <article class="row resume-timeline" id="publications">
             <div class="col-twelve resume-header">
                 <h2>Publications</h2>
             </div> <!-- /resume-header -->
@@ -314,7 +315,7 @@
     {{/if}}
 
     {{#if resume.education}}
-        <article class="row resume-timeline">
+        <article class="row resume-timeline" id="education">
             <div class="col-twelve resume-header">
                 <h2>Education</h2>
             </div> <!-- /resume-header -->
