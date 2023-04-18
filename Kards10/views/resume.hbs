@@ -199,235 +199,106 @@
 
     {{#if resume.work}}
         <div class="row resume-timeline">
-
-
             <div class="col-twelve resume-header">
-
                 <h2>Work Experience</h2>
-
             </div> <!-- /resume-header -->
-
             <div class="col-twelve">
-
                 <div class="timeline-wrap">
-
                     {{#each resume.work}}
-                        <div class="timeline-block">
-
-                            <div class="timeline-ico">
-                                <i class="fa-solid fa-briefcase"></i>
-                            </div>
-
-                            <div class="timeline-header">
-                                <h4>{{{name}}}</h4>
-                                <p>{{date startDate}} - {{date endDate}}</p>
-                            </div>
-
-                            <div class="timeline-content">
-                                <h3>{{position}}</h3>
-                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
-                            </div>
-
-                            {{#if highlights}}
-                            <ul class="timeline-highlights">
-                                {{#each highlights}}
-                                    <li><p>{{#markdown}}{{this}}{{/markdown}}</p></li>
-                                {{/each}}
-                            </ul>
-                            {{/if}}
-
-                        </div> <!-- /timeline-block -->
+                        {{> timeline-block
+                            icon="briefcase"
+                            header=name
+                            title=position
+                            summary=summary
+                            highlights=highlights }}
                     {{/each}}
-
                 </div> <!-- /timeline-wrap -->
-
             </div> <!-- /col-twelve -->
-
         </div> <!-- /resume-timeline -->
     {{/if}}
 
     {{#if resume.projects}}
         <div class="row resume-timeline">
-
             <div class="col-twelve resume-header">
-
                 <h2>Projects</h2>
-
             </div> <!-- /resume-header -->
-
             <div class="col-twelve">
-
                 <div class="timeline-wrap">
-
                     {{#each resume.projects}}
-                        <div class="timeline-block">
-
-                            <div class="timeline-ico">
-                                <i class="fa-solid fa-cogs"></i>
-                            </div>
-
-                            <div class="timeline-header">
-                                <h4>{{entity}}</h4>
-                                {{#if roles}}
-                                    <ul class="timeline-project-roles">
-                                        {{#each roles}}
-                                            <li>{{#markdown}}{{this}}{{/markdown}}</li>
-                                        {{/each}}
-                                    </ul>
-                                {{/if}}
-                                <p>{{date startDate}} - {{date endDate}}</p>
-                            </div>
-
-                            <div class="timeline-content">
-                                <h3>{{{name}}}</h3>
-                                <p>{{#markdown}}{{{description}}}{{/markdown}}</p>
-                            </div>
-
-                            {{#if highlights}}
-                            <ul class="timeline-highlights">
-                                {{#each highlights}}
-                                    <li><p>{{#markdown}}{{this}}{{/markdown}}</p></li>
-                                {{/each}}
-                            </ul>
-                            {{/if}}
-
-                        </div> <!-- /timeline-block -->
+                        {{> timeline-block
+                            icon="cogs"
+                            header=entity
+                            title=name
+                            roles=roles
+                            summary=description
+                            highlights=highlights }}
                     {{/each}}
-
                 </div> <!-- /timeline-wrap -->
-
             </div> <!-- /col-twelve -->
-
         </div> <!-- /resume-timeline -->
     {{/if}}
 
     {{#if resume.volunteer}}
         <div class="row resume-timeline">
-
-
             <div class="col-twelve resume-header">
-
                 <h2>Volunteer Work</h2>
-
             </div> <!-- /resume-header -->
-
             <div class="col-twelve">
-
                 <div class="timeline-wrap">
-
                     {{#each resume.volunteer}}
-                        <div class="timeline-block">
-
-                            <div class="timeline-ico">
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-
-                            <div class="timeline-header">
-                                <h4>{{position}}</h4>
-                                <p>{{date startDate}} - {{date endDate}}</p>
-                            </div>
-
-                            <div class="timeline-content">
-                                <h3>{{organization}}</h3>
-                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
-                            </div>
-
-                        </div> <!-- /timeline-block -->
+                        {{> timeline-block
+                            icon="handshake"
+                            header=position
+                            title=organization
+                            summary=summary
+                            highlights=highlights }}
                     {{/each}}
-
                 </div> <!-- /timeline-wrap -->
-
             </div> <!-- /col-twelve -->
-
         </div> <!-- /resume-timeline -->
     {{/if}}
 
     {{#if resume.publications}}
         <div class="row resume-timeline">
-
-
             <div class="col-twelve resume-header">
-
                 <h2>Publications</h2>
-
             </div> <!-- /resume-header -->
 
             <div class="col-twelve">
-
                 <div class="timeline-wrap">
-
                     {{#each resume.publications}}
-                        <div class="timeline-block">
-
-                            <div class="timeline-ico">
-                                <i class="fa-solid fa-book"></i>
-                            </div>
-
-                            <div class="timeline-header">
-                                <h4>{{publisher}}</h4>
-                                <p>{{date releaseDate}}</p>
-                            </div>
-
-                            <div class="timeline-content">
-                                <h3>
-                                    <a href="{{url}}" target="_blank">
-                                        <span>{{{name}}}</span>
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </h3>
-                                <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
-                            </div>
-
-                        </div> <!-- /timeline-block -->
+                        {{> timeline-block
+                            icon="book"
+                            header=publisher
+                            title=name
+                            startDate=releaseDate
+                            summary=summary
+                            highlights=highlights }}
                     {{/each}}
-
                 </div> <!-- /timeline-wrap -->
-
             </div> <!-- /col-twelve -->
-
         </div> <!-- /resume-timeline -->
     {{/if}}
 
     {{#if resume.education}}
         <div class="row resume-timeline">
-
             <div class="col-twelve resume-header">
-
                 <h2>Education</h2>
-
             </div> <!-- /resume-header -->
-
             <div class="col-twelve">
-
                 <div class="timeline-wrap">
-
                     {{#each resume.education}}
-                        <div class="timeline-block">
-
-                            <div class="timeline-ico">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-
-                            <div class="timeline-header">
-                                <h4>{{studyType}} Degree</h4>
-                                <p>{{date startDate}} - {{date endDate}}</p>
-                            </div>
-
-                            <div class="timeline-content">
-                                <h3>{{institution}}</h3>
-                                <p>{{area}}</p>
-                            </div>
-
-                        </div> <!-- /timeline-block -->
+                        {{> timeline-block
+                            icon="graduation-cap"
+                            header=studyType
+                            title=institution
+                            summary=area
+                            roles=courses }}
                     {{/each}}
-
                 </div> <!-- /timeline-wrap -->
-
             </div> <!-- /col-twelve -->
-
         </div> <!-- /resume-timeline -->
     {{/if}}
-
 
 </section> <!-- /features -->
 
