@@ -107,9 +107,14 @@
 
                 <div class="intro-info">
 
-                    {{#if image}}<img src="{{image}}" alt="Profile Picture">{{/if}}
-
-                    <p class="lead">{{#markdown}}{{summary}}{{/markdown}}</p>
+                    <div class="lead">
+                        {{#each (paragraphs summary)}}
+                            <p>{{#markdown}}{{this}}{{/markdown}}</p>
+                            {{#if @first}}
+                                {{#if ../image}}<img src="{{../image}}" alt="Portrait picture of {{../name}}">{{/if}}
+                            {{/if}}
+                        {{/each}}
+                    </div>
                 </div>
 
             </div>
