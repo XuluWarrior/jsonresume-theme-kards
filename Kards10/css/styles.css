@@ -10924,6 +10924,38 @@ header .top-bar {
   left: 35%;
   top: 0;
 }
+#resume .timeline-wrap .more a.reveal {
+  background-color: #282828;
+  position: relative;
+  left: 35%;
+  display: block;
+  font-size: 2rem;
+  color: #fbe094;
+  padding-left: 60px;
+  border-left: 1px dashed #a1a1a1;
+}
+#resume .timeline-wrap .more a.reveal:link,
+#resume .timeline-wrap .more a.reveal:visited {
+  color: #fbe094;
+}
+#resume .timeline-wrap .more a.reveal:after {
+  font-family: 'Font Awesome 6 Free';
+  content: '\2b';
+  display: inline-block;
+  margin-left: 1rem;
+}
+#resume .timeline-wrap .more a.reveal.active:after {
+  content: '\f068';
+}
+#resume .timeline-wrap .more .hidden {
+  display: none;
+}
+#resume .timeline-wrap .more:target a.reveal:after {
+  content: '\f068';
+}
+#resume .timeline-wrap .more:target .hidden {
+  display: block;
+}
 #resume .timeline-block {
   position: relative;
   padding-top: 3rem;

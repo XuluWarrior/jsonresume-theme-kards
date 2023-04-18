@@ -1667,6 +1667,48 @@ header {
         left: 35%;
         top: 0;
     }
+
+    .more {
+        a.reveal {
+            background-color: @weighted-section-background-color;
+            position: relative;
+            left: 35%;
+            display: block;
+            font-size: 2rem;
+            color: @primary-text-color;
+            padding-left: 60px;
+            border-left: 1px dashed @muted-text-color;
+
+            &:link, &:visited {
+                color: @primary-text-color;
+            }
+
+            &:after {
+                font-family: 'Font Awesome 6 Free';
+                content: '\2b';
+                display: inline-block;
+                margin-left: 1rem;
+            }
+
+            &.active:after {
+                content: '\f068';
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        &:target {
+            a.reveal:after {
+                content: '\f068';
+            }
+
+            .hidden {
+                display: block;
+            }
+        }
+    }
 }
 
 #resume .timeline-block {
