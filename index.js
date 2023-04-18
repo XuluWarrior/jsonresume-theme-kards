@@ -93,6 +93,20 @@ Handlebars.registerHelper('skillLevel', function (str) {
     }
 });
 
+Handlebars.registerHelper('hostname', function(str) {
+    if (!str) {
+        return '';
+    }
+
+    var url = new URL(str);
+    var hostname = url.hostname;
+    if (hostname.startsWith('www.')) {
+        hostname = hostname.substring(4);
+    }
+
+    return hostname;
+});
+
 // Resume.json used to have website property in some entries.  This has been renamed to url.
 // However the demo data still uses the website property so we will also support the "wrong" property name.
 // Fix the resume object to use url property
