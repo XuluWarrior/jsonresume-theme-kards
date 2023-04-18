@@ -206,12 +206,20 @@
             <div class="col-twelve">
                 <div class="timeline-wrap">
                     {{#each resume.work}}
+                        {{#if (eq @index 3)}}
+                            <div class="more" id="more-work">
+                                <a class="reveal" href="#more-work">More work</a>
+                                <div class="hidden">
+                        {{/if}}
+
                         {{> timeline-block
                             icon="briefcase"
                             header=name
                             title=position
                             summary=summary
                             highlights=highlights }}
+
+                        {{#if (gt ../resume.projects.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
                     {{/each}}
                 </div> <!-- /timeline-wrap -->
             </div> <!-- /col-twelve -->
@@ -226,6 +234,12 @@
             <div class="col-twelve">
                 <div class="timeline-wrap">
                     {{#each resume.projects}}
+                        {{#if (eq @index 3)}}
+                            <div class="more" id="more-projects">
+                                <a class="reveal" href="#more-projects">More projects</a>
+                                <div class="hidden">
+                        {{/if}}
+
                         {{> timeline-block
                             icon="cogs"
                             header=entity
@@ -233,6 +247,8 @@
                             roles=roles
                             summary=description
                             highlights=highlights }}
+
+                        {{#if (gt ../resume.projects.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
                     {{/each}}
                 </div> <!-- /timeline-wrap -->
             </div> <!-- /col-twelve -->
@@ -247,12 +263,20 @@
             <div class="col-twelve">
                 <div class="timeline-wrap">
                     {{#each resume.volunteer}}
+                        {{#if (eq @index 3)}}
+                            <div class="more" id="more-volunteer-work">
+                                <a class="reveal" href="#more-volunteer-work">More volunteer work</a>
+                                <div class="hidden">
+                        {{/if}}
+
                         {{> timeline-block
                             icon="handshake"
                             header=position
                             title=organization
                             summary=summary
                             highlights=highlights }}
+
+                        {{#if (gt ../resume.volunteer.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
                     {{/each}}
                 </div> <!-- /timeline-wrap -->
             </div> <!-- /col-twelve -->
@@ -268,6 +292,12 @@
             <div class="col-twelve">
                 <div class="timeline-wrap">
                     {{#each resume.publications}}
+                        {{#if (eq @index 3)}}
+                            <div class="more" id="more-publications">
+                                <a class="reveal" href="#more-publications">More publications</a>
+                                <div class="hidden">
+                        {{/if}}
+
                         {{> timeline-block
                             icon="book"
                             header=publisher
@@ -275,6 +305,8 @@
                             startDate=releaseDate
                             summary=summary
                             highlights=highlights }}
+
+                        {{#if (gt ../resume.publications.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
                     {{/each}}
                 </div> <!-- /timeline-wrap -->
             </div> <!-- /col-twelve -->

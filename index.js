@@ -47,6 +47,9 @@ Handlebars.registerHelper('paragraphs', function (str) {
     return str.split('\n').filter(p => p.trim().length > 0);
 });
 
+Handlebars.registerHelper('eq', (a, b) => a == b);
+Handlebars.registerHelper('gt', (a, b) => a > b);
+
 Handlebars.registerHelper('displayUrl', function (str) {
     return str.replace(/https?:\/\//, "");
 });
