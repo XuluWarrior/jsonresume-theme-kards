@@ -157,7 +157,7 @@ function render(resume) {
     var css = fs.readFileSync(__dirname + "/Kards10/css/styles.css", "utf-8");
 	var mainJs = fs.readFileSync(__dirname + "/Kards10/js/main.js", "utf-8");
 	var pluginsJs = fs.readFileSync(__dirname + "/Kards10/js/plugins.js", "utf-8");
-	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
+	var tpl = fs.readFileSync(__dirname + "/Kards10/views/resume.hbs", "utf-8");
 
 	fixResume(resume);
 
