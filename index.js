@@ -43,6 +43,10 @@ Handlebars.registerHelper('markdown', function (str, locals, options) {
         markup;
 });
 
+Handlebars.registerHelper('paragraphs', function (str) {
+    return str.split('\n').filter(p => p.trim().length > 0);
+});
+
 Handlebars.registerHelper('displayUrl', function (str) {
     return str.replace(/https?:\/\//, "");
 });

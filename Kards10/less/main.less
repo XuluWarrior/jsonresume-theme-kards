@@ -1493,20 +1493,26 @@ header {
 }
 
 .intro-info {
-	margin-top: 4.2rem;
-	margin-right: -30px;
-	margin-left: -30px;
-}
-.intro-info img {
-	height: 9rem;
-	width: 9rem;
-	border-radius: 50%;
-	margin: .9rem 0 0 0;
-	float: left;
-}
-.intro-info .lead {
-	text-align: left;
-	padding-left: 13rem;
+    margin: 4.2rem -2rem 0 -2rem;
+
+    img {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        margin: 2rem 3rem 0 0;
+        float: left;
+    }
+
+    .lead p {
+        text-align: left;
+        padding-left: 23rem;
+
+        &:first-of-type {
+            padding-left: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
 }
 
 .about-content {
