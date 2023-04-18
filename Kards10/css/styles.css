@@ -10887,6 +10887,7 @@ header .top-bar {
   text-align: center;
 }
 #resume .resume-header h2 {
+  margin-top: 5rem;
   color: #f1bcc8;
 }
 #resume .resume-timeline {
