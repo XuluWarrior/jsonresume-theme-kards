@@ -60,6 +60,11 @@ Handlebars.registerHelper('date', function(str) {
 	}
 });
 
+
+Handlebars.registerHelper('isodate', function (str) {
+    return moment(str).format('YYYY-MM-DD');
+});
+
 Handlebars.registerHelper('now', function(context) {
     return moment(new Date()).format(context);
 });
@@ -161,20 +166,20 @@ function render(resume) {
 
 	fixResume(resume);
 
-	//var partialsDir = path.join(__dirname, 'partials');
-	//var filenames = fs.readdirSync(partialsDir);
-    //
-	//filenames.forEach(function (filename) {
-	//  var matches = /^([^.]+).hbs$/.exec(filename);
-	//  if (!matches) {
-	//    return;
-	//  }
-	//  var name = matches[1];
-	//  var filepath = path.join(partialsDir, filename);
-	//  var template = fs.readFileSync(filepath, 'utf8');
-    //
-	//  Handlebars.registerPartial(name, template);
-	//});
+	var partialsDir = path.join(__dirname, 'Kards10/views/partials');
+	var filenames = fs.readdirSync(partialsDir);
+    
+	filenames.forEach(function (filename) {
+	  var matches = /^([^.]+).hbs$/.exec(filename);
+	  if (!matches) {
+	    return;
+	  }
+	  var name = matches[1];
+	  var filepath = path.join(partialsDir, filename);
+	  var template = fs.readFileSync(filepath, 'utf8');
+    
+	  Handlebars.registerPartial(name, template);
+	});
 
 	const packageJSON = require("./package");
 

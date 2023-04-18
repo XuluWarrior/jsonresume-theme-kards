@@ -1,0 +1,45 @@
+<div class="timeline-block">
+    <div class="timeline-ico">
+        <i class="fa-solid fa-{{icon}}"></i>
+    </div>
+
+    <div class="timeline-header">
+        <h4>{{{header}}}</h4>
+        {{#if roles}}
+            <ul class="timeline-project-roles">
+                {{#each roles}}
+                    <li>{{#markdown}}{{this}}{{/markdown}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+        <p>
+            {{#if startDate}}
+                <time datetime="{{isodate startDate}}">{{date startDate}}</time>
+            {{/if}}
+            {{#if endDate}}
+                - <time datetime="{{isodate endDate}}">{{date endDate}}</time>
+            {{/if}}
+        </p>
+        {{#if url}}
+            <p class="link">
+                <a href="{{url}}" target="_blank">
+                    <span>{{{hostname url}}}</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </p>
+        {{/if}}
+    </div>
+
+    <div class="timeline-content">
+        <h3>{{{title}}}</h3>
+        <p>{{#markdown}}{{{summary}}}{{/markdown}}</p>
+    </div>
+
+    {{#if highlights}}
+    <ul class="timeline-highlights">
+        {{#each highlights}}
+            <li><p>{{#markdown}}{{this}}{{/markdown}}</p></li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
