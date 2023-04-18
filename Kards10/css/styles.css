@@ -10405,6 +10405,19 @@ header .top-bar {
   margin-top: 13px;
   display: block;
   position: relative;
+  /* is clicked */
+}
+.menu-toggle::after {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  position: relative;
+  left: 0;
+  top: -13px;
+  border-style: solid;
+  border-width: 62px 0 0 60px;
+  border-color: transparent transparent transparent #000;
+  content: '';
+  z-index: 1;
 }
 .menu-toggle span {
   display: block;
@@ -10420,6 +10433,7 @@ header .top-bar {
   top: 50%;
   bottom: auto;
   left: auto;
+  z-index: 2;
   -moz-transition: background 0.2s ease-in-out;
   -o-transition: background 0.2s ease-in-out;
   -webkit-transition: background 0.2s ease-in-out;
@@ -10461,7 +10475,10 @@ header .top-bar {
   -ms-transition-property: bottom, transform;
   transition-property: bottom, transform;
 }
-/* is clicked */
+.menu-toggle.is-clicked::after {
+  left: 60px;
+  border-left-width: 92px;
+}
 .menu-toggle.is-clicked span {
   background-color: rgba(255, 0, 119, 0);
 }
@@ -10489,7 +10506,6 @@ header .top-bar {
 /* navigation panel */
 #main-nav-wrap {
   display: block;
-  width: 100%;
   font-family: "poppins-medium", sans-serif;
   font-size: 1.5rem;
   position: absolute;
