@@ -132,6 +132,7 @@ function fixResume(resume) {
     resume.volunteer = sort(resume.volunteer, false, v => v.startDate);
     resume.publications = sort(resume.publications, false, p => p.releaseDate);
     resume.projects = sort(resume.projects, false, p => p.startDate);
+    resume.skills = sort(resume.skills, false, s => parseInt(s.level, 10), s => Array.isArray(s.keywords) && s.keywords.includes('Secondary'))
 }
 
 function fixEntries(entries) {
@@ -161,10 +162,21 @@ function fixEntries(entries) {
     }
 }
 
-function sort(array, ascending, field) {
+function sort(array, ascending, field, weightReducer) {
     return array.sort((a, b) => {
-        af = field(a);
-        bf = field(b);
+        const af = field(a);
+        const bf = field(b);
+
+        if (weightReducer) {
+            const weightReducerA = weightReducer(a);
+            const weightReducerB = weightReducer(b);
+
+            if (weightReducerA && !weightReducerB) {
+                return ascending ? -1 : 1;
+            } else if (!weightReducerA && weightReducerB) {
+                return ascending ? 1 : -1;
+            }
+        }
 
         if (af < bf) {
             return ascending ? -1 : 1;
