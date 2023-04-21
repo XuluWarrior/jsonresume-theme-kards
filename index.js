@@ -136,29 +136,36 @@ function fixResume(resume) {
 }
 
 function fixEntries(entries) {
-    if (entries) {
-        for (var i = 0; i < entries.length; i++) {
-            var entry = entries[i];
+    if (!entries) {
+        return;
+    }
 
-            for (var key in entry) {
-                const value = entry[key];
-                if (typeof value !== 'string') {
-                    continue;
-                }
-
-                entry[key] = value.replace('™️', '<sup>&trade;</sup>');
-            }
-
-            if (entry.website) {
-                entry.url = entry.website;
-                delete entry.website;
-            }
-
-            if (entry.company) {
-                entry.name = entry.company;
-                delete entry.company;
-            }
+    for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i];
+        if (typeof entry === 'string') {
+            entries[i] = entry.replace('™️', '<sup>&trade;</sup>');
         }
+
+        for (var key in entry) {
+            const value = entry[key];
+            if (typeof value !== 'string') {
+                continue;
+            }
+
+            entry[key] = value.replace('™️', '<sup>&trade;</sup>');
+        }
+
+        if (entry.website) {
+            entry.url = entry.website;
+            delete entry.website;
+        }
+
+        if (entry.company) {
+            entry.name = entry.company;
+            delete entry.company;
+        }
+
+        fixEntries(entry.highlights);
     }
 }
 
