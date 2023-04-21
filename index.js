@@ -32,7 +32,7 @@ Handlebars.registerHelper('markdown', function (str, locals, options) {
 
     var markup = marked(val);
 
-    markup = markup.replace(/\*\[([^\]]+)\](:|\()([\s\w]+)\)?/, (_a, abbrev, _b, description) => {
+    markup = markup.replace(/\*\[([^\]]+)\](:|\()([\s\w\-]+)\)?/, (_a, abbrev, _b, description) => {
         return `<abbr title="${description}">${abbrev}</abbr>`;
     });
 
