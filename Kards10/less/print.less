@@ -19,6 +19,14 @@
         padding: 0;
     }
 
+    .reveal {
+        display: none !important;
+    }
+
+    .hidden {
+        display: block !important;
+    }
+
     #intro {
         height: auto;
         min-height: auto;
@@ -68,6 +76,15 @@
             max-width: auto;
         }
 
+        #profile, #skills {
+            width: auto;
+            float: none;
+        }
+
+        #skills {
+            break-before: page;
+        }
+
         .skill-bars li {
             print-color-adjust: exact;
 
@@ -83,7 +100,7 @@
     }
 
     #resume {
-        break-before: page;
+        break-before: auto;
 
         .resume-timeline {
             max-width: auto;

@@ -10205,11 +10205,41 @@ input::-moz-focus-inner {
   margin-bottom: 6rem;
   padding: 0;
   position: relative;
+  break-before: avoid-page;
 }
+.skill-bars li.more {
+  height: auto;
+  background: transparent;
+}
+.skill-bars li.more a.reveal {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.skill-bars li.more a.reveal,
+.skill-bars li.more a.reveal:link,
+.skill-bars li.more a.reveal:visited,
+.skill-bars li.more a.reveal:active {
+  color: #f1bcc8;
+}
+.skill-bars li.more a.reveal:hover {
+  text-decoration: underline;
+}
+.skill-bars li.more a.reveal:after {
+  font-family: 'Font Awesome 6 Free';
+  content: '\2b';
+  display: inline-block;
+  margin-left: 1rem;
+}
+.skill-bars li.more a.reveal.active:after {
+  content: '\f068';
+}
+.skill-bars li a,
 .skill-bars li strong {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: -3rem;
+  top: -4rem;
   font-family: "poppins-bold", sans-serif;
   color: #fbe094;
   text-transform: uppercase;
@@ -10217,10 +10247,17 @@ input::-moz-focus-inner {
   font-size: 1.5rem;
   line-height: 2.4rem;
 }
+.skill-bars li .hidden {
+  display: none;
+  list-style: none;
+  margin: 0;
+}
 .skill-bars li .progress {
+  break-after: avoid;
   background: #fbe094;
   position: relative;
   height: 100%;
+  top: -30px;
 }
 .skill-bars li .progress span {
   position: absolute;
@@ -12764,6 +12801,12 @@ img.mfp-img {
   [class*="col-"] {
     padding: 0;
   }
+  .reveal {
+    display: none !important;
+  }
+  .hidden {
+    display: block !important;
+  }
   #intro {
     height: auto;
     min-height: auto;
@@ -12808,6 +12851,14 @@ img.mfp-img {
     width: auto;
     max-width: auto;
   }
+  #about #profile,
+  #about #skills {
+    width: auto;
+    float: none;
+  }
+  #about #skills {
+    break-before: page;
+  }
   #about .skill-bars li {
     print-color-adjust: exact;
   }
@@ -12819,7 +12870,7 @@ img.mfp-img {
     background-color: #000;
   }
   #resume {
-    break-before: page;
+    break-before: auto;
   }
   #resume .resume-timeline {
     max-width: auto;
