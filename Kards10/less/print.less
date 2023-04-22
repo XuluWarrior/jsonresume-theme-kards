@@ -86,10 +86,15 @@
         }
 
         .skill-bars li {
+            break-inside: avoid-page;
             print-color-adjust: exact;
 
             strong {
                 color: #000;
+
+                abbr::after {
+                    content: ' (' attr(title) ')';
+                }
             }
 
             .progress {
@@ -106,20 +111,44 @@
             max-width: auto;
 
             .timeline-header {
-                width: 40%;
+
+            }
+
+            .timeline-ico {
+                border: 1px solid #ccc;
             }
 
             .timeline-wrap::before {
-                background-color: #ccc;
+                background: #ccc;
                 print-color-adjust: exact;
             }
 
             .timeline-highlights {
                 color: #ccc;
+
+                li::before {
+                    color: #ccc;
+                    print-color-adjust: exact;
+                }
             }
 
             .timeline-block {
-                break-before: page;
+                break-inside: avoid-page;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 100%;
+                    background: #ccc;
+                    position: absolute;
+                    left: 35%;
+                    top: 0;
+                }
+            }
+
+            a.reveal {
+                border-color: #ccc;
             }
         }
     }
