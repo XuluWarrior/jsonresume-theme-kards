@@ -33,7 +33,7 @@ Handlebars.registerHelper('markdown', function (str, locals, options) {
     var markup = marked(val);
 
     markup = markup.replace(/\*\[([^\]]+)\](:|\()([\s\w\-]+)\)?/, (_a, abbrev, _b, description) => {
-        return `<abbr title="${description}">${abbrev}</abbr>`;
+        return `<abbr title="${description.trim()}">${abbrev.trim()}</abbr>`;
     });
 
     // If we end up with a string wrapped in one <p> block, remove it so we don't create a new text block
