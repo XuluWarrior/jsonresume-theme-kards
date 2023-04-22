@@ -10205,7 +10205,6 @@ input::-moz-focus-inner {
   margin-bottom: 6rem;
   padding: 0;
   position: relative;
-  break-before: avoid-page;
 }
 .skill-bars li.more {
   height: auto;
@@ -10239,7 +10238,7 @@ input::-moz-focus-inner {
 .skill-bars li strong {
   position: relative;
   left: 0;
-  top: -4rem;
+  top: -30px;
   font-family: "poppins-bold", sans-serif;
   color: #fbe094;
   text-transform: uppercase;
@@ -10253,7 +10252,6 @@ input::-moz-focus-inner {
   margin: 0;
 }
 .skill-bars li .progress {
-  break-after: avoid;
   background: #fbe094;
   position: relative;
   height: 100%;
@@ -12860,10 +12858,14 @@ img.mfp-img {
     break-before: page;
   }
   #about .skill-bars li {
+    break-inside: avoid-page;
     print-color-adjust: exact;
   }
   #about .skill-bars li strong {
     color: #000;
+  }
+  #about .skill-bars li strong abbr::after {
+    content: ' (' attr(title) ')';
   }
   #about .skill-bars li .progress {
     print-color-adjust: exact;
@@ -12875,18 +12877,35 @@ img.mfp-img {
   #resume .resume-timeline {
     max-width: auto;
   }
-  #resume .resume-timeline .timeline-header {
-    width: 40%;
+  #resume .resume-timeline .timeline-ico {
+    border: 1px solid #ccc;
   }
   #resume .resume-timeline .timeline-wrap::before {
-    background-color: #ccc;
+    background: #ccc;
     print-color-adjust: exact;
   }
   #resume .resume-timeline .timeline-highlights {
     color: #ccc;
   }
+  #resume .resume-timeline .timeline-highlights li::before {
+    color: #ccc;
+    print-color-adjust: exact;
+  }
   #resume .resume-timeline .timeline-block {
-    break-before: page;
+    break-inside: avoid-page;
+  }
+  #resume .resume-timeline .timeline-block::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #ccc;
+    position: absolute;
+    left: 35%;
+    top: 0;
+  }
+  #resume .resume-timeline a.reveal {
+    border-color: #ccc;
   }
   footer {
     display: none;
