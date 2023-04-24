@@ -155,21 +155,24 @@
             <div class="col-six tab-full" id="skills">
                 <h3>Skills</h3>
 
-                <ul class="skill-bars">
-                    {{#each resume.skills}}
-                        {{#if (eq @index 4)}}
-                            <li class="more" id="more-skills">
-                                <a class="reveal" href="#skills">More skills</a>
-                                <ul class="hidden">
-                        {{/if}}
+                {{#each resume.skills}}
+                    {{#if (eq @index 0)}}
+                        <ul class="skill-bars">
+                    {{/if}}
 
-                        <li>
-                            <strong>{{#markdown}}{{name}}{{/markdown}}</strong>
-                            <div class="progress percent{{skillLevel level}}"><span>{{skillLevel level}}%</span></div>
-                        </li>
+                    {{#if (eq @index 4)}}
+                        </ul>
+                        <a class="reveal" href="#skills">More skills</a>
+                        <ul class="skill-bars hidden">
+                    {{/if}}
 
-                        {{#if (gt ../resume.skills.length 3)}}{{#if @last}}</ul></li>{{/if}}{{/if}}
-                    {{/each}}
+                    <li class="percent{{skillLevel level}}">
+                        <strong>{{#markdown}}{{name}}{{/markdown}}</strong>
+                        <span>{{skillLevel level}}%</span>
+                    </li>
+
+                    {{#if (gt ../resume.skills.length 3)}}{{#if @last}}</ul></li>{{/if}}{{/if}}
+                {{/each}}
 
                 </ul> <!-- /skill-bars -->
 

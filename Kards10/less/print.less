@@ -1,4 +1,8 @@
 @media print {
+    html, body {
+        background: none;
+    }
+
     header {
         display: none;
     }
@@ -17,14 +21,6 @@
 
     [class*="col-"] {
         padding: 0;
-    }
-
-    .reveal {
-        display: none !important;
-    }
-
-    .hidden {
-        display: block !important;
     }
 
     #intro {
@@ -49,6 +45,10 @@
             display: none;
         }
 
+        .intro-overlay {
+            background: none;
+        }
+
         .intro-position {
             text-shadow: none;
             color: #666;
@@ -64,6 +64,7 @@
     }
 
     #about {
+        background: none;
         border-top: none;
         padding-top: 0;
 
@@ -85,34 +86,51 @@
             break-before: page;
         }
 
-        .skill-bars li {
-            break-inside: avoid-page;
-            print-color-adjust: exact;
+        .info-list {
+            strong, span {
+                color: #222;
+            }
+        }
 
-            strong {
-                color: #000;
+        a.reveal {
+            display: none;
+        }
 
-                abbr::after {
-                    content: ' (' attr(title) ')';
-                }
+        .skill-bars {
+            &, &.hidden {
+                width: 97%;
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+                justify-content: space-between;
+                gap: 0 1em;
+                margin: 0;
             }
 
-            .progress {
+            li {
+                break-inside: avoid;
                 print-color-adjust: exact;
-                background-color: #000;
+
+                &::after {
+                    border-color: #000;
+                }
+
+                strong {
+                    color: #000;
+
+                    abbr::after {
+                        content: ' (' attr(title) ')';
+                    }
+                }
             }
         }
     }
 
     #resume {
+        background: none;
         break-before: auto;
 
         .resume-timeline {
             max-width: auto;
-
-            .timeline-header {
-
-            }
 
             .timeline-ico {
                 border: 1px solid #ccc;
@@ -147,8 +165,16 @@
                 }
             }
 
+            a:link, a:visited, a:active, a:focus, a:hover {
+                color: #000 !important;
+            }
+
             a.reveal {
-                border-color: #ccc;
+                display: none !important;
+            }
+
+            .hidden {
+                display: block !important;
             }
         }
     }

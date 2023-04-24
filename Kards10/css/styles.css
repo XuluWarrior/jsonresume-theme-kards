@@ -10194,51 +10194,63 @@ input::-moz-focus-inner {
  * skillbars - (_skillbars.scss)
  * -------------------------------------------------------------------
  */
-.skill-bars {
-  list-style: none;
-  margin: 6rem 0 3rem;
-}
-.skill-bars li {
-  height: 0.6rem;
-  background: #a1a1a1;
-  width: 100%;
-  margin-bottom: 6rem;
-  padding: 0;
-  position: relative;
-}
-.skill-bars li.more {
-  height: auto;
-  background: transparent;
-}
-.skill-bars li.more a.reveal {
+#skills a.reveal {
+  font-family: "poppins-bold", sans-serif;
+  color: #fbe094;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 2.4rem;
   display: block;
   font-size: 1.8rem;
   margin-bottom: 1.8rem;
 }
-.skill-bars li.more a.reveal,
-.skill-bars li.more a.reveal:link,
-.skill-bars li.more a.reveal:visited,
-.skill-bars li.more a.reveal:active {
+#skills a.reveal,
+#skills a.reveal:link,
+#skills a.reveal:visited,
+#skills a.reveal:active {
   color: #f1bcc8;
 }
-.skill-bars li.more a.reveal:hover {
+#skills a.reveal:hover {
   text-decoration: underline;
 }
-.skill-bars li.more a.reveal:after {
+#skills a.reveal:after {
   font-family: 'Font Awesome 6 Free';
   content: '\2b';
   display: inline-block;
   margin-left: 1rem;
 }
-.skill-bars li.more a.reveal.active:after {
+#skills a.reveal.active:after {
   content: '\f068';
 }
-.skill-bars li a,
-.skill-bars li strong {
+#skills .skill-bars {
+  list-style: none;
+  margin: 6rem 0 3rem;
+}
+#skills .skill-bars.hidden {
+  display: none;
+  list-style: none;
+  margin: 0;
+}
+#skills .skill-bars li {
+  border-bottom: 6px solid #a1a1a1;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 0 0 12px 0;
+  display: grid;
+  grid-template-columns: 90% 10%;
   position: relative;
-  left: 0;
-  top: -30px;
+}
+#skills .skill-bars li:after {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  border-bottom: 6px solid #fbe094;
+}
+#skills .skill-bars li a,
+#skills .skill-bars li strong {
+  width: 90%;
   font-family: "poppins-bold", sans-serif;
   color: #fbe094;
   text-transform: uppercase;
@@ -10246,22 +10258,9 @@ input::-moz-focus-inner {
   font-size: 1.5rem;
   line-height: 2.4rem;
 }
-.skill-bars li .hidden {
-  display: none;
-  list-style: none;
-  margin: 0;
-}
-.skill-bars li .progress {
-  background: #fbe094;
-  position: relative;
-  height: 100%;
-  top: -30px;
-}
-.skill-bars li .progress span {
+#skills .skill-bars li span {
   position: absolute;
   right: 0;
-  top: -3.6rem;
-  display: block;
   font-family: "poppins-regular", sans-serif;
   color: #212121;
   font-size: 1.1rem;
@@ -10270,7 +10269,7 @@ input::-moz-focus-inner {
   padding: 0.6rem 0.6rem;
   border-radius: 3px;
 }
-.skill-bars li .progress span::after {
+#skills .skill-bars li span::after {
   position: absolute;
   left: 50%;
   bottom: -5px;
@@ -10280,65 +10279,145 @@ input::-moz-focus-inner {
   border-top: 5px solid #fbe094;
   content: "";
 }
-.skill-bars li .percent5 {
+#skills .skill-bars li.percent5::after {
   width: 5%;
 }
-.skill-bars li .percent10 {
+#skills .skill-bars li.percent5 span {
+  right: auto;
+  left: 0%;
+}
+#skills .skill-bars li.percent10::after {
   width: 10%;
 }
-.skill-bars li .percent15 {
+#skills .skill-bars li.percent10 span {
+  right: auto;
+  left: 5%;
+}
+#skills .skill-bars li.percent15::after {
   width: 15%;
 }
-.skill-bars li .percent20 {
+#skills .skill-bars li.percent15 span {
+  right: auto;
+  left: 10%;
+}
+#skills .skill-bars li.percent20::after {
   width: 20%;
 }
-.skill-bars li .percent25 {
+#skills .skill-bars li.percent20 span {
+  right: auto;
+  left: 15%;
+}
+#skills .skill-bars li.percent25::after {
   width: 25%;
 }
-.skill-bars li .percent30 {
+#skills .skill-bars li.percent25 span {
+  right: auto;
+  left: 20%;
+}
+#skills .skill-bars li.percent30::after {
   width: 30%;
 }
-.skill-bars li .percent35 {
+#skills .skill-bars li.percent30 span {
+  right: auto;
+  left: 25%;
+}
+#skills .skill-bars li.percent35::after {
   width: 35%;
 }
-.skill-bars li .percent40 {
+#skills .skill-bars li.percent35 span {
+  right: auto;
+  left: 30%;
+}
+#skills .skill-bars li.percent40::after {
   width: 40%;
 }
-.skill-bars li .percent45 {
+#skills .skill-bars li.percent40 span {
+  right: auto;
+  left: 35%;
+}
+#skills .skill-bars li.percent45::after {
   width: 45%;
 }
-.skill-bars li .percent50 {
+#skills .skill-bars li.percent45 span {
+  right: auto;
+  left: 40%;
+}
+#skills .skill-bars li.percent50::after {
   width: 50%;
 }
-.skill-bars li .percent55 {
+#skills .skill-bars li.percent50 span {
+  right: auto;
+  left: 45%;
+}
+#skills .skill-bars li.percent55::after {
   width: 55%;
 }
-.skill-bars li .percent60 {
+#skills .skill-bars li.percent55 span {
+  right: auto;
+  left: 50%;
+}
+#skills .skill-bars li.percent60::after {
   width: 60%;
 }
-.skill-bars li .percent65 {
+#skills .skill-bars li.percent60 span {
+  right: auto;
+  left: 55%;
+}
+#skills .skill-bars li.percent65::after {
   width: 65%;
 }
-.skill-bars li .percent70 {
+#skills .skill-bars li.percent65 span {
+  right: auto;
+  left: 60%;
+}
+#skills .skill-bars li.percent70::after {
   width: 70%;
 }
-.skill-bars li .percent75 {
+#skills .skill-bars li.percent70 span {
+  right: auto;
+  left: 65%;
+}
+#skills .skill-bars li.percent75::after {
   width: 75%;
 }
-.skill-bars li .percent80 {
+#skills .skill-bars li.percent75 span {
+  right: auto;
+  left: 70%;
+}
+#skills .skill-bars li.percent80::after {
   width: 80%;
 }
-.skill-bars li .percent85 {
+#skills .skill-bars li.percent80 span {
+  right: auto;
+  left: 75%;
+}
+#skills .skill-bars li.percent85::after {
   width: 85%;
 }
-.skill-bars li .percent90 {
+#skills .skill-bars li.percent85 span {
+  right: auto;
+  left: 80%;
+}
+#skills .skill-bars li.percent90::after {
   width: 90%;
 }
-.skill-bars li .percent95 {
+#skills .skill-bars li.percent90 span {
+  right: auto;
+  left: 85%;
+}
+#skills .skill-bars li.percent95::after {
   width: 95%;
 }
-.skill-bars li .percent100 {
+#skills .skill-bars li.percent95 span {
+  right: auto;
+  left: 90%;
+}
+#skills .skill-bars li.percent100::after {
   width: 100%;
+}
+#skills .skill-bars li.percent100 span {
+  right: auto;
+  left: 95%;
 }
 /**
  * ===================================================================
@@ -12779,6 +12858,10 @@ img.mfp-img {
 }
 /*# sourceMappingURL=vendor.css.map */
 @media print {
+  html,
+  body {
+    background: none;
+  }
   header {
     display: none;
   }
@@ -12798,12 +12881,6 @@ img.mfp-img {
   }
   [class*="col-"] {
     padding: 0;
-  }
-  .reveal {
-    display: none !important;
-  }
-  .hidden {
-    display: block !important;
   }
   #intro {
     height: auto;
@@ -12826,6 +12903,9 @@ img.mfp-img {
   #intro .intro-social {
     display: none;
   }
+  #intro .intro-overlay {
+    background: none;
+  }
   #intro .intro-position {
     text-shadow: none;
     color: #666;
@@ -12837,6 +12917,7 @@ img.mfp-img {
     content: '';
   }
   #about {
+    background: none;
     border-top: none;
     padding-top: 0;
   }
@@ -12857,9 +12938,28 @@ img.mfp-img {
   #about #skills {
     break-before: page;
   }
+  #about .info-list strong,
+  #about .info-list span {
+    color: #222;
+  }
+  #about a.reveal {
+    display: none;
+  }
+  #about .skill-bars,
+  #about .skill-bars.hidden {
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: space-between;
+    gap: 0 1em;
+    margin: 0;
+  }
   #about .skill-bars li {
-    break-inside: avoid-page;
+    break-inside: avoid;
     print-color-adjust: exact;
+  }
+  #about .skill-bars li::after {
+    border-color: #000;
   }
   #about .skill-bars li strong {
     color: #000;
@@ -12867,11 +12967,8 @@ img.mfp-img {
   #about .skill-bars li strong abbr::after {
     content: ' (' attr(title) ')';
   }
-  #about .skill-bars li .progress {
-    print-color-adjust: exact;
-    background-color: #000;
-  }
   #resume {
+    background: none;
     break-before: auto;
   }
   #resume .resume-timeline {
@@ -12904,8 +13001,18 @@ img.mfp-img {
     left: 35%;
     top: 0;
   }
+  #resume .resume-timeline a:link,
+  #resume .resume-timeline a:visited,
+  #resume .resume-timeline a:active,
+  #resume .resume-timeline a:focus,
+  #resume .resume-timeline a:hover {
+    color: #000 !important;
+  }
   #resume .resume-timeline a.reveal {
-    border-color: #ccc;
+    display: none !important;
+  }
+  #resume .resume-timeline .hidden {
+    display: block !important;
   }
   footer {
     display: none;
