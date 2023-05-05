@@ -66,10 +66,14 @@
     #about {
         background: none;
         border-top: none;
-        padding-top: 0;
+        padding: 0;
 
         h5, h1, .button-section {
             display: none;
+        }
+
+        .intro-info {
+            margin: 0;
         }
 
         .about-content {
@@ -82,43 +86,48 @@
             float: none;
         }
 
-        #skills {
-            break-before: page;
-        }
-
         .info-list {
             strong, span {
                 color: #222;
             }
         }
 
-        a.reveal {
-            display: none;
-        }
+        #skills {
+            break-before: page;
+            margin-top: 1rem;
 
-        .skill-bars {
-            &, &.hidden {
-                width: 97%;
-                display: grid;
-                grid-template-columns: repeat(2, 50%);
-                justify-content: space-between;
-                gap: 0 1em;
-                margin: 0;
+            a.reveal {
+                display: none;
             }
 
-            li {
-                break-inside: avoid;
-                print-color-adjust: exact;
-
-                &::after {
-                    border-color: #000;
+            .skill-bars {
+                &, &.hidden {
+                    width: 97%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+                    justify-content: space-between;
+                    gap: 0 1em;
+                    margin: 0;
                 }
 
-                strong {
-                    color: #000;
+                li {
+                    break-inside: avoid;
+                    print-color-adjust: exact;
 
-                    abbr::after {
-                        content: ' (' attr(title) ')';
+                    &::after {
+                        border-color: #000;
+                    }
+
+                    strong {
+                        color: #000;
+
+                        abbr::after {
+                            content: ' (' attr(title) ')';
+                        }
+                    }
+
+                    span {
+                        print-color-adjust: exact;
                     }
                 }
             }
@@ -127,13 +136,19 @@
 
     #resume {
         background: none;
-        break-before: auto;
+        break-before: page;
+        padding-top: 3rem;
 
         .resume-timeline {
             max-width: auto;
+            break-before: page;
+
+            &#work {
+                break-before: auto;
+            }
 
             .timeline-ico {
-                border: 1px solid #ccc;
+                print-color-adjust: exact;
             }
 
             .timeline-wrap::before {
@@ -153,6 +168,10 @@
             .timeline-block {
                 break-inside: avoid-page;
 
+                &.first {
+                    break-inside: auto;
+                }
+
                 &::before {
                     content: "";
                     display: block;
@@ -162,6 +181,7 @@
                     position: absolute;
                     left: 35%;
                     top: 0;
+                    print-color-adjust: exact;
                 }
             }
 

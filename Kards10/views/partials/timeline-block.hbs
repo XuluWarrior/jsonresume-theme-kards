@@ -1,4 +1,4 @@
-<div class="timeline-block">
+<div class="timeline-block {{#if (eq @index 0)}}first{{/if}}">
     <div class="timeline-ico">
         <i class="fa-solid fa-{{icon}}"></i>
     </div>
@@ -12,6 +12,7 @@
                 {{/each}}
             </ul>
         {{/if}}
+
         <p>
             {{#if startDate}}
                 <time datetime="{{isodate startDate}}">{{date startDate}}</time>
@@ -27,6 +28,14 @@
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </p>
+        {{/if}}
+
+        {{#if keywords}}
+            <ul class="timeline-project-keywords">
+                {{#each keywords}}
+                    <li>{{#markdown}}{{this}}{{/markdown}}</li>
+                {{/each}}
+            </ul>
         {{/if}}
     </div>
 

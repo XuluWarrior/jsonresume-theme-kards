@@ -9845,7 +9845,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  color: #f1bcc8;
+  color: #fbe094;
   border-bottom: 1px solid #fbe094;
 }
 label,
@@ -10208,7 +10208,7 @@ input::-moz-focus-inner {
 #skills a.reveal:link,
 #skills a.reveal:visited,
 #skills a.reveal:active {
-  color: #f1bcc8;
+  color: #fbe094;
 }
 #skills a.reveal:hover {
   text-decoration: underline;
@@ -10430,7 +10430,7 @@ input::-moz-focus-inner {
   background: #282828;
 }
 .weighted-section p.lead {
-  color: #f1bcc8;
+  color: #fbe094;
 }
 .section-intro {
   max-width: 700px;
@@ -10448,7 +10448,7 @@ input::-moz-focus-inner {
   margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-  color: #f1bcc8;
+  color: #AB87FA;
   font-size: 1.6rem;
   line-height: 1.875;
   margin-bottom: 0.3rem;
@@ -10728,7 +10728,7 @@ header .top-bar {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-  color: #f1bcc8;
+  color: #fbe094;
   font-family: "poppins-bold", sans-serif;
   font-size: 2.3rem;
   line-height: 1.565;
@@ -10776,7 +10776,7 @@ header .top-bar {
 }
 .intro-content .button:hover,
 .intro-content .button .intro-content .button:focus {
-  border-color: #f1bcc8;
+  border-color: #fbe094;
 }
 .intro-content .button::after {
   display: inline-block;
@@ -10919,7 +10919,7 @@ header .top-bar {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #f1bcc8;
+  color: #fbe094;
 }
 .about-content .info-list {
   list-style: none;
@@ -11021,7 +11021,7 @@ header .top-bar {
 }
 #resume .resume-header h2 {
   margin-top: 5rem;
-  color: #f1bcc8;
+  color: #fbe094;
 }
 #resume .resume-timeline {
   max-width: 1080px;
@@ -11137,6 +11137,21 @@ header .top-bar {
 }
 #resume .timeline-header .timeline-project-roles li:last-child:after {
   content: '';
+}
+#resume .timeline-header .timeline-project-keywords {
+  list-style-type: none;
+  margin-top: 3rem;
+}
+#resume .timeline-header .timeline-project-keywords li {
+  font-family: "poppins-regular", sans-serif;
+  display: inline;
+  border: 1px solid #a1a1a1;
+  color: #a1a1a1;
+  padding: 0.2rem 0.7rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  text-transform: lowercase;
 }
 #resume .timeline-header .link a:link {
   text-decoration: none;
@@ -11444,7 +11459,7 @@ header .top-bar {
   border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-  background: #f1bcc8;
+  background: #fbe094;
   border: none;
 }
 @media only screen and (max-width: 600px) {
@@ -11594,7 +11609,7 @@ header .top-bar {
   margin-bottom: 1.8rem;
 }
 #services .section-intro h1 {
-  color: #f1bcc8;
+  color: #fbe094;
 }
 #services .section-intro h5 {
   color: #fbe094;
@@ -11727,7 +11742,7 @@ header .top-bar {
   color: #fbe094;
 }
 #contact .section-intro h5 {
-  color: #f1bcc8;
+  color: #fbe094;
 }
 #contact .section-intro p {
   color: rgba(255, 255, 255, 0.7);
@@ -11836,7 +11851,7 @@ header .top-bar {
 }
 #contact button.submitform:hover,
 #contact button.submitform:focus {
-  background: #f1bcc8;
+  background: #fbe094;
 }
 #message-warning,
 #message-success {
@@ -12054,7 +12069,7 @@ footer .copyright span:last-child::after {
   height: 6.6rem;
   width: 6rem;
   line-height: 6.6rem;
-  background: #f1bcc8;
+  background: #fbe094;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -12919,12 +12934,15 @@ img.mfp-img {
   #about {
     background: none;
     border-top: none;
-    padding-top: 0;
+    padding: 0;
   }
   #about h5,
   #about h1,
   #about .button-section {
     display: none;
+  }
+  #about .intro-info {
+    margin: 0;
   }
   #about .about-content {
     width: auto;
@@ -12935,18 +12953,19 @@ img.mfp-img {
     width: auto;
     float: none;
   }
-  #about #skills {
-    break-before: page;
-  }
   #about .info-list strong,
   #about .info-list span {
     color: #222;
   }
-  #about a.reveal {
+  #about #skills {
+    break-before: page;
+    margin-top: 1rem;
+  }
+  #about #skills a.reveal {
     display: none;
   }
-  #about .skill-bars,
-  #about .skill-bars.hidden {
+  #about #skills .skill-bars,
+  #about #skills .skill-bars.hidden {
     width: 97%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -12954,28 +12973,36 @@ img.mfp-img {
     gap: 0 1em;
     margin: 0;
   }
-  #about .skill-bars li {
+  #about #skills .skill-bars li {
     break-inside: avoid;
     print-color-adjust: exact;
   }
-  #about .skill-bars li::after {
+  #about #skills .skill-bars li::after {
     border-color: #000;
   }
-  #about .skill-bars li strong {
+  #about #skills .skill-bars li strong {
     color: #000;
   }
-  #about .skill-bars li strong abbr::after {
+  #about #skills .skill-bars li strong abbr::after {
     content: ' (' attr(title) ')';
+  }
+  #about #skills .skill-bars li span {
+    print-color-adjust: exact;
   }
   #resume {
     background: none;
-    break-before: auto;
+    break-before: page;
+    padding-top: 3rem;
   }
   #resume .resume-timeline {
     max-width: auto;
+    break-before: page;
+  }
+  #resume .resume-timeline#work {
+    break-before: auto;
   }
   #resume .resume-timeline .timeline-ico {
-    border: 1px solid #ccc;
+    print-color-adjust: exact;
   }
   #resume .resume-timeline .timeline-wrap::before {
     background: #ccc;
@@ -12991,6 +13018,9 @@ img.mfp-img {
   #resume .resume-timeline .timeline-block {
     break-inside: avoid-page;
   }
+  #resume .resume-timeline .timeline-block.first {
+    break-inside: auto;
+  }
   #resume .resume-timeline .timeline-block::before {
     content: "";
     display: block;
@@ -13000,6 +13030,7 @@ img.mfp-img {
     position: absolute;
     left: 35%;
     top: 0;
+    print-color-adjust: exact;
   }
   #resume .resume-timeline a:link,
   #resume .resume-timeline a:visited,
