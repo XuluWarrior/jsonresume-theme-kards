@@ -1078,7 +1078,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: @secondary-accent-color;
+	color: @secondary-color;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1833,6 +1833,23 @@ header {
             &:last-child:after {
                 content: '';
             }
+        }
+    }
+
+    .timeline-project-keywords {
+        list-style-type: none;
+        margin-top: 3rem;
+
+        li {
+            font-family: "poppins-regular", sans-serif;
+            display: inline;
+            border: 1px solid @muted-text-color;
+            color: @muted-text-color;
+            padding: .2rem .7rem;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            white-space: nowrap;
+            text-transform: lowercase;
         }
     }
 
