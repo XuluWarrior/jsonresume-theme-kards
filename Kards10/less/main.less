@@ -934,41 +934,41 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: @secondary-text-color;
 }
 
+a.reveal {
+    font-family: "poppins-bold", sans-serif;
+    color: @primary-text-color;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 2.4rem;
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+
+    &, &:link, &:visited, &:active {
+        color: @tertiary-text-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:after {
+        font-family: 'Font Awesome 6 Free';
+        content: '\2b';
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    &.active:after {
+        content: '\f068';
+    }
+}
+
 /**
  * skillbars - (_skillbars.scss)
  * -------------------------------------------------------------------
  */
 #skills {
-    a.reveal {
-        font-family: "poppins-bold", sans-serif;
-        color: @primary-text-color;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        line-height: 2.4rem;
-        display: block;
-        font-size: 1.8rem;
-        margin-bottom: 1.8rem;
-
-        &, &:link, &:visited, &:active {
-            color: @tertiary-text-color;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:after {
-            font-family: 'Font Awesome 6 Free';
-            content: '\2b';
-            display: inline-block;
-            margin-left: 1rem;
-        }
-
-        &.active:after {
-            content: '\f068';
-        }
-    }
-
     .skill-bars {
         list-style: none;
         margin: 6rem 0 5rem;
@@ -1714,26 +1714,8 @@ header {
             background-color: @weighted-section-background-color;
             position: relative;
             left: 35%;
-            display: block;
-            font-size: 2rem;
-            color: @primary-text-color;
             padding-left: 60px;
             border-left: 1px dashed @muted-text-color;
-
-            &:link, &:visited {
-                color: @primary-text-color;
-            }
-
-            &:after {
-                font-family: 'Font Awesome 6 Free';
-                content: '\2b';
-                display: inline-block;
-                margin-left: 1rem;
-            }
-
-            &.active:after {
-                content: '\f068';
-            }
         }
 
         .hidden {
