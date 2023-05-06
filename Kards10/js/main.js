@@ -213,18 +213,15 @@
 
     $('.reveal').click(function() {
         const self = $(this);
-        self.siblings('.hidden').slideToggle({
-            complete: function() {
-                self.toggleClass('active');
-                const text = self.text();
+        self.toggleClass('active');
+        const text = self.text();
 
-                if (text.match(/More/)) {
-                    self.text(text.replace('More', 'Less'));
-                } else {
-                    self.text(text.replace('Less', 'More'));
-                }
-            }
-        });
+        if (text.match(/More/)) {
+            self.text(text.replace('More', 'Less'));
+        } else {
+            self.text(text.replace('Less', 'More'));
+        }
+        self.siblings('.hidden').slideToggle();
         return false;
     });
 })(jQuery);
