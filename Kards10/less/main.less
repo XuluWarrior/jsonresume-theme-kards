@@ -969,13 +969,31 @@ a.reveal {
  * -------------------------------------------------------------------
  */
 #skills {
+    margin-top: 6rem;
+
+    h3 {
+        text-align: left;
+    }
+
+    a.reveal {
+        text-align: left;
+        margin-bottom: 5rem;
+    }
+
     .skill-bars {
         list-style: none;
         margin: 6rem 0 5rem;
 
+        &, &.hidden {
+            width: 97%;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            justify-content: space-between;
+            gap: 0 2rem;
+        }
+
         &.hidden {
             display: none;
-            list-style: none;
             margin: 0;
         }
 
@@ -1005,6 +1023,7 @@ a.reveal {
                 letter-spacing: .2rem;
                 font-size: 1.5rem;
                 line-height: 2.4rem;
+                text-align: left;
             }
 
             span {
@@ -1516,72 +1535,74 @@ header {
 	background: @about-section-background-color;
 	padding-top: 12rem;
 	padding-bottom: 15rem;
-}
-#about .section-intro {
-	margin-bottom: 3rem;
-}
-
-.intro-info {
-    margin: 4.2rem -2rem 0 -2rem;
-
-    img {
-        height: 20rem;
-        width: 20rem;
-        border-radius: 50%;
-        margin: 2rem 3rem 0 0;
-        float: left;
-    }
 
     .lead p {
         text-align: left;
-        padding-left: 23rem;
 
         &:first-of-type {
-            padding-left: 0;
             font-size: 2rem;
             font-weight: bold;
         }
     }
-}
 
-.about-content {
-	position: relative;
-	text-align: left;
-	max-width: 850px;
-	margin-bottom: 6rem;
-}
-.about-content h3 {
-	font-family: "poppins-bold", sans-serif;
-	font-size: 1.8rem;
-	text-transform: uppercase;
-	letter-spacing: .25rem;
-    color: @tertiary-text-color;
-}
-.about-content .info-list {
-	list-style: none;
-	margin-left: 0;
-}
-.about-content .info-list li {
-	padding: 0 0 1.5rem 0;
-	margin-bottom: .6rem;
-}
-.about-content .info-list li strong {
-	font-family: "poppins-bold", sans-serif;
-	color: @tertiary-text-color;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	font-size: 1.5rem;
-	line-height: 3rem;
-}
-.about-content .info-list li span {
-	display: block;
-	font-family: "poppins-regular", sans-serif;
-	color: @tertiary-text-color;
-	font-size: 1.5rem;
-	line-height: 1;
-}
-.about-content .skill-bars {
-	margin-top: 6rem;
+    .section-intro {
+        margin-bottom: 3rem;
+    }
+
+    .intro-info {
+        margin: 4.2rem -2rem 0 -2rem;
+    }
+
+    .about-content {
+        position: relative;
+        text-align: left;
+        margin-bottom: 6rem;
+
+        img {
+            height: 30rem;
+            width: 30rem;
+            border-radius: 50%;
+        }
+
+        h3 {
+            font-family: "poppins-bold", sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+            color: @tertiary-text-color;
+        }
+
+        [class*="col-"] {
+            padding: 0;
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 0 2rem 0 0;
+
+            li {
+                padding: 0 0 1.5rem 0;
+                margin-bottom: .6rem;
+
+                strong {
+                    font-family: "poppins-bold", sans-serif;
+                    color: @tertiary-text-color;
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                }
+
+                span {
+                    display: block;
+                    font-family: "poppins-regular", sans-serif;
+                    color: @tertiary-text-color;
+                    font-size: 1.5rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
 }
 
 .button-section {

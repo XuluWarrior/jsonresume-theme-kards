@@ -219,16 +219,25 @@
     });
 
     $('.reveal').click(function() {
-        const self = $(this);
-        self.toggleClass('active');
-        const text = self.text();
+        const $self = $(this);
+        const text = $self.text();
+        const $hidden = $self.siblings('.hidden');
+        const display = $self.data('display') || 'block';
 
-        if (text.match(/More/)) {
-            self.text(text.replace('More', 'Less'));
+        if ($self.hasClass('active')) {
+            $self.removeClass('active');
+            $self.text(text.replace('Less', 'More'));
+            $hidden.slideUp();
         } else {
-            self.text(text.replace('Less', 'More'));
+            $self.addClass('active');
+            $self.text(text.replace('More', 'Less'));
+            $hidden.slideDown({
+                start: function() {
+                  $(this).css('display', display);
+                }
+            });
         }
-        self.siblings('.hidden').slideToggle();
+
         return false;
     });
 })(jQuery);
