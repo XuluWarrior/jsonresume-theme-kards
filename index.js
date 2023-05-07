@@ -122,7 +122,11 @@ Handlebars.registerHelper('hostname', function(str) {
 // However the demo data still uses the website property so we will also support the "wrong" property name.
 // Fix the resume object to use url property
 function fixResume(resume) {
-    if (resume.basics.website) {
+    if (!resume) {
+        return;
+    }
+
+    if (resume.basics && resume.basics.website) {
         resume.basics.url = resume.basics.website;
         delete resume.basics.website
     }
