@@ -1,32 +1,20 @@
-language: node_js
-node_js: '10'
+name: build
+on: [push, pull_request]
 
-before_install:
-- npm install -g npm@7.x.x
-
-install:
-  - npm ci
-  - npm install -g resume-cli@1.2.8
-  - npm install --no-save @percy/script
-
-cache:
-  directories:
-    - "$HOME/.npm"
-
-script:
-- npm run build:styles
-- resume serve --resume=example-resume.json --port 5001 --silent &
-- sleep 2s
-- npx percy exec -- node tests/percy.js
-
-deploy:
-  provider: npm
-  email: npm@xuluwarrior.org
-  api_key:
-    secure: fFBvzkTmSdXKLLZLu5rN341FDyb8cs94eqezP0ow24pOMdHGyISBtZnozBISaoXo7rpb3zpHLeAuNrRHYCGVmRQlVBjHxdTrGsH23N7lAPoSsl3xUIu/8rm/JDMBNp7GkZTe/7caHeMWVfhhJ6odohPIXd02T/rf/QgNZbGzfUfrV5oG2nYN222emOa7NgQEBtrqQ9nGtEuTs3MlEfaB4zNm6YnTfiRSW5fL8t5+nqdE+MURQRlmS0D1MiYRORWjoZkMEq2XZVE+Bp6vXAqmBVXDRd/4naxhXgxdvjFDh4riC2mS75crGClaBCoQuyCpVCFGbgEWlGayM4A0fQJcrjUefhJBZ1FBhkz6ZfoHXvRjLXvwazfATrRJ3sQYM4Dx4pQHqXZ+T/vW0fow7bPJhSVYqETgezDRrJ7Pt+e9KF280zpEHgyuswzryHVcBZb8i6SvT4/5UEmDL1IH0gu3lEnnJ9ln+ncQ8PZicPWo25tGg1ln+S+M2yrhLqbGfmXyZLJXfE4NQ8Izo84yf3ZeDxJq5b7KuHvuvZUeptp8BDfj5EQ3CPc5zgohNC8Dgo4a+H+VGkj/F7D3nwtVU9+iNbbn8N4WzeHeQVZPQJmOHL512/T4xzuM5e/35YPoZ+4G8vhJxk1NhrvTt/Ko0cPjaiM1PktFbl9vyvmEpitpfg0=
-  on:
-    tags: true
-    repo: XuluWarrior/jsonresume-theme-kards
-
-env:
-  secure: orQDf/SXgWozRId0WpAeqy1vd5l+ey+OWpjPdoOycsj1delHnSiTBrenbnkd/rC2M/6ySqdu4iQFOvdb27K9bWCBOmxzMc6nzMCE6Nnw1Fo9TsRYnWToSHKGnsSAdBQNluAEHv+BKYdg3DPKhptW7NkyhJZrJA4p7ym2QiLniv6R27qAI3KfmtvtqupVtFtLZgDnRbzEbFgOJHyoISRJdm0l0fC69Xm8LxmJMPkTiATw+ZRaBZ3gxTbYYBP3Do+GAtvBtHk0m9KGFbKUqufsS4D1K0b4ShaPNXAdpQNYr2rjyf5/BFHRJNG1zhpSjV7k8pKUoajFYo5JlfZR/AJ3Xsof0Li0pPiokRflin7CAnO6NtDOXU3Ya91ju7VHHGQr037EvMOChXhfYFqOnLwzj2Ux47xmGYPnt2Buco6E7nI1Tqtvm05NORdW6UHHT7P+Dtq4Z5fUl1dXZoR/IAux7BIXo0QYcZKqWprDiJpud7Dt3je747L2uUPNCfmD/ZQwJfYhkX+wZzlUCz8A+2l3bkHn5bvBpdphK4Ztn6ZpgyN+ZN3tNA/V3yz0evYvsOihO8WJLoB6jmyjT+ty7pDa9SJJQ6ZeSTnWlicUAOunDwJLqDrOy2vnrqGqfjlmUKBMs5s1z5M2Fwbmq6ilgelODU6jyd0r32GWEy6A0dXKIlA=
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 10.x
+        cache: npm
+    - run: npm ci
+    - run: npm install -g resume-cli@1.2.8
+    - run: npm install --no-save @percy/script
+    - run: npm run build:styles
+    - run: resume serve --resume=example-resume.json --port 5001 --silent &
+    - run: sleep 2s
+    - run: npx percy exec -- node tests/percy.js
