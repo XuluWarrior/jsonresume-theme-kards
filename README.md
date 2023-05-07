@@ -1,84 +1,85 @@
-# JSON Resume Kards Theme 
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/XuluWarrior/jsonresume-theme-kards)
+# JSON Resume Asbjornu Theme
 
-This is a theme for [JSON Resume](http://jsonresume.org/) based on [Kards design](https://www.styleshout.com/free-templates/kards/) by [styleshout](https://www.styleshout.com/).
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/asbjornu/jsonresume-theme-asbjornu)
+
+This is a theme for [JSON Resume](http://jsonresume.org/) based on the [Kards design](https://www.styleshout.com/free-templates/kards/) by [styleshout](https://www.styleshout.com/), heavily modified to fit the needs of [asbjor.nu](https://asbjor.nu/).
 
 |  |  |
 | --- | --- |
-| [![Example resume (intro)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-1.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html) | [![Example resume (about)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-2.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) |
-| [![Example resume (profile)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-3.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#about) | [![Example resume](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-4.png)](https://xuluwarrior.github.io/jsonresume-theme-kards/resume.html#resume) |
+| [![Example resume (intro)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-1.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html) | [![Example resume (about)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-2.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#about) |
+| [![Example resume (profile)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-3.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#about) | [![Example resume](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-4.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#resume) |
 
 ## Getting started
 
-### Install the command line
-
-Install [resume-cli](https://github.com/jsonresume/resume-cli) to render your resume.
-
-```
-sudo npm install -g resume-cli
-```
-
 ### Serve theme
-```
-resume serve --theme kards --resume <path_to_resume.json>
+
+If you have JSON Resume and this theme installed locally, you can run the
+following command to serve up a `resume.json` file:
+
+```sh
+resume serve --theme asbjornu --resume <path/to/resume.json>
 ```
 
 You should now see this message:
 
-```
+```sh
 Preview: http://localhost:4000
 Press ctrl-c to stop
 ```
 
-The resume should open in a new tab in your default browser
+The resume should open in a new tab in your default browser.
 
 ## Editing template
+
+If you need to edit the template to suit your needs, you can do so by following
+the below instructions.
+
 ### Get source from GitHub
-```
-git clone https://github.com/XuluWarrior/jsonresume-theme-kards.git
-cd jsonresume-theme-kards
+
+```sh
+git clone https://github.com/asbjornu/jsonresume-theme-asbjornu.git
+cd jsonresume-theme-asbjornu
 ```
 
 ### Serve theme
+
+```sh
+npx resume serve --theme . --resume <path/to/resume.json>
 ```
-resume serve
-```
-This will use the local version of the theme to render the resume.json
-If there is a local copy of resume.json this will be used.  Otherwise, it will use the default resume.json from [jsonresume.org](https://jsonresume.org/)
+
+This will use the local version of the theme to render the `resume.json` file.
+If there is a local copy of resume.json this will be used.  Otherwise, it will
+use the default resume.json from [jsonresume.org](https://jsonresume.org/).
 
 ### Change background images
-In order for the generated html to be self contained this theme ships with the background images embedded in the css.
-To change the images, edit **Kards10/less/config.less**
-```
+
+In order for the generated html to be self contained this theme ships with the
+background images embedded in the css. To change the images, edit the file
+`Kards10/less/config.less`:
+
+```sh
 @bg-img-url: "data:image/...";
 @intro-bg-img-url: "data:image/...";
 @logo-img-url: "data:image/...";
 ```
-and then rebuild styles.css
+
+Then rebuild:
+
+```sh
+npm run build
 ```
-npm run build:styles
+
+Then serve again:
+
+```sh
+npx resume serve --theme . --resume <path_to_resume.json>
 ```
-
-### Extra sections
-The original Kards design included extra sections such as [Portfolio](https://www.styleshout.com/templates/preview/Kards10/#portfolio) and [Services](https://www.styleshout.com/templates/preview/Kards10/index.html#services).  These don't map directly to jsonresume and so are commented out in the template.
-
-To include them in your template, edit **resume.hbs** and uncomment the appropriate sections and personalise the content e.g.
-
-```
-<!--&lt;!&ndash; Portfolio Section-->
-<!--================================================== &ndash;&gt;-->
-<!--<section id="portfolio">-->
-
- ...
-
-<!--</section> &lt;!&ndash; /portfolio &ndash;&gt;-->  
-```
- 
-|  |  |
-| --- | --- |
-| [![Portfolio section](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-portfolio.png)](https://www.styleshout.com/templates/preview/Kards10/#portfolio) | [![Services section](https://xuluwarrior.github.io/jsonresume-theme-kards/resume-services.png)](https://www.styleshout.com/templates/preview/Kards10/index.html#services) |
 
 ## License
-Template design is available under [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/) attributed to [styleshout](https://www.styleshout.com/)
 
-Source code for generating resume is available under [the MIT license](http://mths.be/mit).
+The template design is available under [Creative Commons Attribution 3.0
+License](http://creativecommons.org/licenses/by/3.0/) attributed to
+[styleshout](https://www.styleshout.com/)
+
+The source code for generating resume is available under [the MIT
+license](http://mths.be/mit).

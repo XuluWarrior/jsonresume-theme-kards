@@ -1,0 +1,217 @@
+@media print {
+    html {
+        font-size: 6pt;
+    }
+
+    html, body {
+        background: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+    }
+
+    p {
+        color: #222 !important;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        padding: 0;
+    }
+
+    #intro {
+        height: auto;
+        min-height: auto;
+
+        h1 {
+            visibility: hidden;
+            text-shadow: none;
+
+            .name {
+                display: block;
+                visibility: visible;
+                width: 100%;
+                text-align: center;
+                font-size: 2cm;
+                color: #000;
+            }
+        }
+
+        h5, .button, .intro-social {
+            display: none;
+        }
+
+        .intro-overlay {
+            background: none;
+        }
+
+        .intro-position {
+            text-shadow: none;
+            color: #666;
+            text-transform: none;
+            font-size: 4mm;
+
+            span {
+                &::before, &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    #about {
+        background: none;
+        border-top: none;
+        padding: 0;
+
+        h5, h1, .button-section {
+            display: none;
+        }
+
+        .intro-info {
+            margin: 0;
+        }
+
+        .about-content {
+            width: auto;
+            max-width: auto;
+        }
+
+        #profile, #skills {
+            width: auto;
+            float: none;
+        }
+
+        .info-list {
+            strong, span {
+                color: #222;
+            }
+        }
+
+        #skills {
+            break-before: page;
+            margin-top: 1rem;
+
+            a.reveal {
+                display: none;
+            }
+
+            .skill-bars {
+                &, &.hidden {
+                    width: 97%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+                    justify-content: space-between;
+                    gap: 0 1em;
+                    margin: 0;
+                }
+
+                li {
+                    break-inside: avoid;
+                    print-color-adjust: exact;
+
+                    &::after {
+                        border-color: #000;
+                    }
+
+                    strong {
+                        color: #000;
+
+                        abbr::after {
+                            content: ' (' attr(title) ')';
+                        }
+                    }
+
+                    span {
+                        print-color-adjust: exact;
+                    }
+                }
+            }
+        }
+    }
+
+    #resume {
+        background: none;
+        break-before: page;
+        padding-top: 3rem;
+
+        .resume-timeline {
+            max-width: auto;
+            break-before: page;
+
+            &#work {
+                break-before: auto;
+            }
+
+            .timeline-ico {
+                print-color-adjust: exact;
+            }
+
+            .timeline-wrap::before {
+                background: #ccc;
+                print-color-adjust: exact;
+            }
+
+            .timeline-highlights {
+                color: #ccc;
+
+                li::before {
+                    color: #ccc;
+                    print-color-adjust: exact;
+                }
+            }
+
+            .timeline-block {
+                break-inside: avoid-page;
+
+                &.first {
+                    break-inside: auto;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 100%;
+                    background: #ccc;
+                    position: absolute;
+                    left: 35%;
+                    top: 0;
+                    print-color-adjust: exact;
+                }
+            }
+
+            a:link, a:visited, a:active, a:focus, a:hover {
+                color: #000 !important;
+            }
+
+            a.reveal {
+                display: none !important;
+            }
+
+            .hidden {
+                display: block !important;
+            }
+        }
+    }
+
+    #contact {
+        break-before: page;
+
+        p.lead {
+            display: none;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}

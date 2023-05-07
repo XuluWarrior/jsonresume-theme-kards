@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="generator" content="https://www.npmjs.com/package/{{meta.packageName}}/v/{{meta.version}}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style>
+                {{{css}}}
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body id="top">
+        <header>
+            <div class="row">
+                <div class="top-bar">
+                    <a class="menu-toggle" href="#"><span>Menu</span></a>
+                    <nav id="main-nav-wrap">
+                        <ul class="main-navigation">
+                            <li class="current"><a href="#intro">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#volunteer-work">Volunteer&nbsp;work</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        {{#resume.basics}}
+            <section id="intro">
+
+                <div class="intro-overlay"></div>
+
+                <div class="intro-content">
+                    <div class="row">
+                        <div class="col-twelve">
+                            <h5>Hello, World</h5>
+                            <h1>I'm <span class="name">{{name}}</span></h1>
+                            <p class="intro-position">{{label}}</p>
+                            <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="intro-social">
+                    {{#each profiles}}
+                        <li><a href="{{url}}" rel="me"><i class="fa-brands fa-lg fa-{{toLowerCase network}}"></i></a></li>
+                    {{/each}}
+                </ul>
+
+            </section>
+
+            <section id="about">
+                <article class="row section-intro">
+                    <div class="col-twelve">
+                        <h5>About</h5>
+                        <h1>Let me introduce myself</h1>
+                        <div class="intro-info">
+                            <div class="lead">
+                                {{#each (paragraphs summary)}}
+                                    <p>{{#markdown}}{{this}}{{/markdown}}</p>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="row about-content section-intro" id="profile">
+                    <h3>Profile</h3>
+
+                    <div class="col-six">
+                        <ul class="info-list">
+                            <li>
+                                <strong>Fullname:</strong>
+                                <span>{{name}}</span>
+                            </li>
+                            {{#if label}}
+                                <li>
+                                    <strong>Job:</strong>
+                                    <span>{{label}}</span>
+                                </li>
+                            {{/if}}
+                            {{#if url}}
+                                <li>
+                                    <strong>Website:</strong>
+                                    <span>{{displayUrl url}}</span>
+                                </li>
+                            {{/if}}
+                            {{#if email}}
+                                <li>
+                                    <strong>Email:</strong>
+                                    <span>{{email}}</span>
+                                </li>
+                            {{/if}}
+
+                        </ul>
+                    </div>
+
+                    {{#if image}}
+                        <div class="col-six">
+                            <img src="{{image}}" alt="Portrait picture of {{name}}">
+                        </div>
+                    {{/if}}
+                </div>
+            {{/resume.basics}}
+
+            <div class="row section-intro" id="skills">
+                {{#if resume.skills}}
+                    <h3>Skills</h3>
+
+                    {{#each resume.skills}}
+                        {{#if (eq @index 0)}}
+                            <ul class="skill-bars">
+                        {{/if}}
+
+                        {{#if (eq @index 8)}}
+                            </ul>
+                            <a class="reveal" href="#skills" data-display="grid">More skills</a>
+                            <ul class="skill-bars hidden">
+                        {{/if}}
+
+                        <li class="percent{{skillLevel level}}">
+                            <strong>{{#markdown}}{{name}}{{/markdown}}</strong>
+                            <span>{{skillLevel level}}%</span>
+                        </li>
+
+                        {{#if (gt ../resume.skills.length 7)}}{{#if @last}}</ul></li>{{/if}}{{/if}}
+                    {{/each}}
+
+                    </ul>
+                {{/if}}
+            </div>
+
+            <div class="row button-section">
+                <div class="col-twelve">
+                    <a href="#contact" class="button stroke smoothscroll">Get in touch</a>
+                    <a href="#" class="button button-primary">Download CV</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="resume" class="weighted-section">
+
+            <article class="row section-intro">
+                <div class="col-twelve">
+                    <h5>Resume</h5>
+                    <h1>More of my credentials</h1>
+                </div>
+            </article>
+
+            {{#if resume.work}}
+                <article class="row resume-timeline" id="work">
+                    <div class="col-twelve resume-header">
+                        <h2>Work Experience</h2>
+                    </div>
+                    <div class="col-twelve">
+                        <div class="timeline-wrap">
+                            {{#each resume.work}}
+                                {{#if (eq @index 3)}}
+                                    <div class="more" id="more-work">
+                                        <a class="reveal" href="#more-work">More work</a>
+                                        <div class="hidden">
+                                {{/if}}
+
+                                {{> timeline-block
+                                    icon="briefcase"
+                                    header=name
+                                    title=position
+                                    summary=summary
+                                    highlights=highlights }}
+
+                                {{#if (gt ../resume.projects.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+            {{/if}}
+
+            {{#if resume.projects}}
+                <article class="row resume-timeline" id="projects">
+                    <div class="col-twelve resume-header">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="col-twelve">
+                        <div class="timeline-wrap">
+                            {{#each resume.projects}}
+                                {{#if (eq @index 3)}}
+                                    <div class="more" id="more-projects">
+                                        <a class="reveal" href="#more-projects">More projects</a>
+                                        <div class="hidden">
+                                {{/if}}
+
+                                {{> timeline-block
+                                    icon="cogs"
+                                    header=entity
+                                    title=name
+                                    roles=roles
+                                    summary=description
+                                    highlights=highlights }}
+
+                                {{#if (gt ../resume.projects.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+            {{/if}}
+
+            {{#if resume.volunteer}}
+                <article class="row resume-timeline" id="volunteer-work">
+                    <div class="col-twelve resume-header">
+                        <h2>Volunteer Work</h2>
+                    </div>
+                    <div class="col-twelve">
+                        <div class="timeline-wrap">
+                            {{#each resume.volunteer}}
+                                {{#if (eq @index 3)}}
+                                    <div class="more" id="more-volunteer-work">
+                                        <a class="reveal" href="#more-volunteer-work">More volunteer work</a>
+                                        <div class="hidden">
+                                {{/if}}
+
+                                {{> timeline-block
+                                    icon="handshake"
+                                    header=position
+                                    title=organization
+                                    summary=summary
+                                    highlights=highlights }}
+
+                                {{#if (gt ../resume.volunteer.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+            {{/if}}
+
+            {{#if resume.publications}}
+                <article class="row resume-timeline" id="publications">
+                    <div class="col-twelve resume-header">
+                        <h2>Publications</h2>
+                    </div>
+
+                    <div class="col-twelve">
+                        <div class="timeline-wrap">
+                            {{#each resume.publications}}
+                                {{#if (eq @index 3)}}
+                                    <div class="more" id="more-publications">
+                                        <a class="reveal" href="#more-publications">More publications</a>
+                                        <div class="hidden">
+                                {{/if}}
+
+                                {{> timeline-block
+                                    icon="book"
+                                    header=publisher
+                                    title=name
+                                    startDate=releaseDate
+                                    summary=summary
+                                    highlights=highlights }}
+
+                                {{#if (gt ../resume.publications.length 1)}}{{#if @last}}</div></div>{{/if}}{{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+            {{/if}}
+
+            {{#if resume.education}}
+                <article class="row resume-timeline" id="education">
+                    <div class="col-twelve resume-header">
+                        <h2>Education</h2>
+                    </div>
+                    <div class="col-twelve">
+                        <div class="timeline-wrap">
+                            {{#each resume.education}}
+                                {{> timeline-block
+                                    icon="graduation-cap"
+                                    header=studyType
+                                    title=institution
+                                    summary=area
+                                    roles=courses }}
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+            {{/if}}
+
+        </section>
+
+        <section id="contact">
+            {{#resume.basics}}
+            <div class="row section-intro">
+                <div class="col-twelve">
+
+                    <h5>Contact</h5>
+                    <h1>I'd Love To Hear From You.</h1>
+
+                    <p class="lead">
+                        I prefer to be contacted through the different social media
+                        platforms listed in the footer. However, if your inquiry is
+                        urgent, please use one of the contact methods listed below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row contact-info">
+                <div class="col-six tab-full collapse">
+                    <div class="icon"><i class="icon-mail"></i></div>
+                    <h5>Email Me At</h5>
+                    <p><a href="mailto:{{email}}">{{email}}</a></p>
+                </div>
+
+                <div class="col-six tab-full">
+                    <div class="icon"><i class="icon-phone"></i></div>
+                    <h5>Call Me At</h5>
+                    <p>Phone: <a href="tel:{{phone}}">{{phone}}</a></p>
+                </div>
+
+            </div>
+            {{/resume.basics}}
+        </section>
+
+        <footer>
+            {{#resume.basics}}
+            <div class="row">
+
+                <div class="col-six tab-full pull-right social">
+
+                    <ul class="footer-social">
+                        {{#each profiles}}
+                            <li><a href="{{url}}"><i class="fa-brands fa-lg fa-{{toLowerCase network}}"></i></a></li>
+                        {{/each}}
+                    </ul>
+
+                </div>
+
+                <div class="col-six tab-full">
+                    <div class="copyright">
+                        <span>{{name}} © {{now 'YYYY'}}.</span>
+                        <span>Original design by <a href="http://www.styleshout.com/">styleshout</a>.</span>
+                    </div>
+                </div>
+
+                <div id="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+                </div>
+
+            </div>
+            {{/resume.basics}}
+        </footer>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript">
+            {{{pluginsJs}}}
+        </script>
+        <script type="text/javascript">
+            {{{mainJs}}}
+        </script>
+    </body>
+</html>

@@ -14,9 +14,14 @@
   "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
   "scripts": {
     "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css",
+    "build:webfonts": "mkdir -p ./public/webfonts && cp -r ./node_modules/@fortawesome/fontawesome-free/webfonts/* ./public/webfonts/",
+    "build": "npm run build:webfonts && npm run build:styles",
+    "serve": "resume serve --theme . --resume example-resume.json",
+    "start": "npm run build:styles && npm run serve",
     "release:prepare": "git checkout master && git pull && npm version patch -m \"Release: %s\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "handlebars": "^4.1.2",
     "handlebars-utils": "^1.0.6",
     "marked": "^4.0.6",
