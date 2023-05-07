@@ -11,7 +11,7 @@ jobs:
         node-version: 16.x
         cache: npm
     - run: npm ci
-    - run: npm run build:styles
+    - run: npm run build
     - run: npx resume serve --resume=example-resume.json --theme . --port 5001 --silent &
     - run: sleep 2s
     - run: npx percy exec -- node tests/percy.js
