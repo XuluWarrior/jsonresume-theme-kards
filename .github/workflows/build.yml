@@ -1,0 +1,17 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        cache: npm
+    - run: npm ci
+    - run: npm run build:styles
+    - run: npx resume serve --resume=example-resume.json --theme . --port 5001 --silent &
+    - run: sleep 2s
+    - run: npx percy exec -- node tests/percy.js
