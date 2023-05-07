@@ -75,7 +75,7 @@ Then serve again:
 npx resume serve --theme . --resume <path_to_resume.json>
 ```
 
-## License
+## License and credits
 
 The template design is available under [Creative Commons Attribution 3.0
 License](http://creativecommons.org/licenses/by/3.0/) attributed to
@@ -83,3 +83,5 @@ License](http://creativecommons.org/licenses/by/3.0/) attributed to
 
 The source code for generating resume is available under [the MIT
 license](http://mths.be/mit).
+
+The background image is by [StockSnap](https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2589504) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2589504).
