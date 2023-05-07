@@ -105,13 +105,17 @@ Handlebars.registerHelper('hostname', function(str) {
         return '';
     }
 
-    var url = new URL(str);
-    var hostname = url.hostname;
-    if (hostname.startsWith('www.')) {
-        hostname = hostname.substring(4);
-    }
+    try {
+        var url = new URL(str);
+        var hostname = url.hostname;
+        if (hostname.startsWith('www.')) {
+            hostname = hostname.substring(4);
+        }
 
-    return hostname;
+        return hostname;
+    } catch {
+        return str;
+    }
 });
 
 // Resume.json used to have website property in some entries.  This has been renamed to url.
