@@ -58,11 +58,8 @@
                 </ul>
 
             </section>
-        {{/resume.basics}}
 
-
-        <section id="about">
-            {{#resume.basics}}
+            <section id="about">
                 <article class="row section-intro">
                     <div class="col-twelve">
                         <h5>About</h5>
@@ -71,21 +68,16 @@
                             <div class="lead">
                                 {{#each (paragraphs summary)}}
                                     <p>{{#markdown}}{{this}}{{/markdown}}</p>
-                                    {{#if @first}}
-                                        {{#if ../image}}<img src="{{../image}}" alt="Portrait picture of {{../name}}">{{/if}}
-                                    {{/if}}
                                 {{/each}}
                             </div>
                         </div>
                     </div>
                 </article>
-            {{/resume.basics}}
 
-            <div class="row about-content">
-                <div class="col-six tab-full" id="profile">
+                <div class="row about-content section-intro" id="profile">
                     <h3>Profile</h3>
 
-                    {{#resume.basics}}
+                    <div class="col-six">
                         <ul class="info-list">
                             <li>
                                 <strong>Fullname:</strong>
@@ -111,35 +103,40 @@
                             {{/if}}
 
                         </ul>
-                    {{/resume.basics}}
-                </div>
-
-                {{#if resume.skills}}
-                    <div class="col-six tab-full" id="skills">
-                        <h3>Skills</h3>
-
-                        {{#each resume.skills}}
-                            {{#if (eq @index 0)}}
-                                <ul class="skill-bars">
-                            {{/if}}
-
-                            {{#if (eq @index 4)}}
-                                </ul>
-                                <a class="reveal" href="#skills">More skills</a>
-                                <ul class="skill-bars hidden">
-                            {{/if}}
-
-                            <li class="percent{{skillLevel level}}">
-                                <strong>{{#markdown}}{{name}}{{/markdown}}</strong>
-                                <span>{{skillLevel level}}%</span>
-                            </li>
-
-                            {{#if (gt ../resume.skills.length 3)}}{{#if @last}}</ul></li>{{/if}}{{/if}}
-                        {{/each}}
-
-                        </ul>
-
                     </div>
+
+                    {{#if image}}
+                        <div class="col-six">
+                            <img src="{{image}}" alt="Portrait picture of {{name}}">
+                        </div>
+                    {{/if}}
+                </div>
+            {{/resume.basics}}
+
+            <div class="row section-intro" id="skills">
+                {{#if resume.skills}}
+                    <h3>Skills</h3>
+
+                    {{#each resume.skills}}
+                        {{#if (eq @index 0)}}
+                            <ul class="skill-bars">
+                        {{/if}}
+
+                        {{#if (eq @index 8)}}
+                            </ul>
+                            <a class="reveal" href="#skills" data-display="grid">More skills</a>
+                            <ul class="skill-bars hidden">
+                        {{/if}}
+
+                        <li class="percent{{skillLevel level}}">
+                            <strong>{{#markdown}}{{name}}{{/markdown}}</strong>
+                            <span>{{skillLevel level}}%</span>
+                        </li>
+
+                        {{#if (gt ../resume.skills.length 7)}}{{#if @last}}</ul></li>{{/if}}{{/if}}
+                    {{/each}}
+
+                    </ul>
                 {{/if}}
             </div>
 
