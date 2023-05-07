@@ -11696,6 +11696,7 @@ header .main-navigation li.current > a {
  * -------------------------------------------------------------------
  */
 #contact {
+  border-top: 3px solid #fbe094;
   background: #151515;
   padding-top: 12rem;
   padding-bottom: 7.2rem;
@@ -12835,6 +12836,9 @@ img.mfp-img {
 }
 /*# sourceMappingURL=vendor.css.map */
 @media print {
+  html {
+    font-size: 6pt;
+  }
   html,
   body {
     background: none;
@@ -13006,6 +13010,12 @@ img.mfp-img {
   }
   #resume .resume-timeline .hidden {
     display: block !important;
+  }
+  #contact {
+    break-before: page;
+  }
+  #contact p.lead {
+    display: none;
   }
   footer {
     display: none;

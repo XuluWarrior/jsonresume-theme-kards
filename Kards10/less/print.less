@@ -1,4 +1,8 @@
 @media print {
+    html {
+        font-size: 6pt;
+    }
+
     html, body {
         background: none;
     }
@@ -196,6 +200,14 @@
             .hidden {
                 display: block !important;
             }
+        }
+    }
+
+    #contact {
+        break-before: page;
+
+        p.lead {
+            display: none;
         }
     }
 
