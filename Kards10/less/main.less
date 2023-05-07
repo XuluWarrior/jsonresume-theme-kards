@@ -2434,18 +2434,24 @@ header {
  * -------------------------------------------------------------------
  */
 #contact {
+    border-top: 3px solid @primary-accent-color;
 	background: #151515;
 	padding-top: 12rem;
 	padding-bottom: 7.2rem;
-}
-#contact .section-intro h1 {
-	color: @primary-accent-color;
-}
-#contact .section-intro h5 {
-	color: @secondary-accent-color;
-}
-#contact .section-intro p {
-	color: rgba(255, 255, 255, 0.7);
+
+    .section-intro {
+        h1 {
+            color: @primary-accent-color;
+        }
+
+        h5 {
+            color: @secondary-accent-color;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
 }
 
 /* contact form */
