@@ -9,6 +9,6 @@ resume.json
 .idea/
 .envrc
 .travis.yml
-Kards10/less/
-Kards10/images/
+theme/less/
+theme/images/
 tests/

@@ -58,7 +58,7 @@ use the default resume.json from [jsonresume.org](https://jsonresume.org/).
 
 In order for the generated html to be self contained this theme ships with the
 background images embedded in the css. To change the images, edit the file
-`Kards10/less/config.less`:
+`theme/less/config.less`:
 
 ```sh
 @bg-img-url: "data:image/...";

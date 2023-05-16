@@ -206,14 +206,14 @@ function sort(array, ascending, field, weightReducer) {
 }
 
 function render(resume) {
-    var css = fs.readFileSync(__dirname + "/Kards10/css/styles.css", "utf-8");
-    var mainJs = fs.readFileSync(__dirname + "/Kards10/js/main.js", "utf-8");
-    var pluginsJs = fs.readFileSync(__dirname + "/Kards10/js/plugins.js", "utf-8");
-    var tpl = fs.readFileSync(__dirname + "/Kards10/views/resume.hbs", "utf-8");
+    var css = fs.readFileSync(__dirname + "/theme/css/styles.css", "utf-8");
+    var mainJs = fs.readFileSync(__dirname + "/theme/js/main.js", "utf-8");
+    var pluginsJs = fs.readFileSync(__dirname + "/theme/js/plugins.js", "utf-8");
+    var tpl = fs.readFileSync(__dirname + "/theme/views/resume.hbs", "utf-8");
 
     fixResume(resume);
 
-    var partialsDir = path.join(__dirname, 'Kards10/views/partials');
+    var partialsDir = path.join(__dirname, 'theme/views/partials');
     var filenames = fs.readdirSync(partialsDir);
 
     filenames.forEach(function (filename) {
