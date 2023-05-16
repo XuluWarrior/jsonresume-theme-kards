@@ -1,13 +1,13 @@
-# JSON Resume Asbjornu Theme
+# JSON Resume Golden Theme
 
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/asbjornu/jsonresume-theme-asbjornu)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/asbjornu/jsonresume-theme-golden)
 
 This is a theme for [JSON Resume](http://jsonresume.org/) based on the [Kards design](https://www.styleshout.com/free-templates/kards/) by [styleshout](https://www.styleshout.com/), heavily modified to fit the needs of [asbjor.nu](https://asbjor.nu/).
 
 |  |  |
 | --- | --- |
-| [![Example resume (intro)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-1.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html) | [![Example resume (about)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-2.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#about) |
-| [![Example resume (profile)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-3.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#about) | [![Example resume](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume-4.png)](https://asbjornu.github.io/jsonresume-theme-asbjornu/resume.html#resume) |
+| [![Example resume (intro)](https://asbjornu.github.io/jsonresume-theme-golden/resume-1.png)](https://asbjornu.github.io/jsonresume-theme-golden/resume.html) | [![Example resume (about)](https://asbjornu.github.io/jsonresume-theme-golden/resume-2.png)](https://asbjornu.github.io/jsonresume-theme-golden/resume.html#about) |
+| [![Example resume (profile)](https://asbjornu.github.io/jsonresume-theme-golden/resume-3.png)](https://asbjornu.github.io/jsonresume-theme-golden/resume.html#about) | [![Example resume](https://asbjornu.github.io/jsonresume-theme-golden/resume-4.png)](https://asbjornu.github.io/jsonresume-theme-golden/resume.html#resume) |
 
 ## Getting started
 
@@ -17,7 +17,7 @@ If you have JSON Resume and this theme installed locally, you can run the
 following command to serve up a `resume.json` file:
 
 ```sh
-resume serve --theme asbjornu --resume <path/to/resume.json>
+resume serve --theme golden --resume <path/to/resume.json>
 ```
 
 You should now see this message:
@@ -37,8 +37,8 @@ the below instructions.
 ### Get source from GitHub
 
 ```sh
-git clone https://github.com/asbjornu/jsonresume-theme-asbjornu.git
-cd jsonresume-theme-asbjornu
+git clone https://github.com/asbjornu/jsonresume-theme-golden.git
+cd jsonresume-theme-golden
 ```
 
 ### Serve theme
