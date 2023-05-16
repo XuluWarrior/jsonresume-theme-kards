@@ -1357,6 +1357,7 @@ header {
 }
 
 .intro-overlay {
+    border-top: 4px solid @primary-accent-color;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1814,10 +1815,11 @@ header {
             border: 1px solid @secondary-text-color;
             color: @secondary-text-color;
             padding: .2rem .7rem;
-            border-radius: 2rem;
+            border-radius: 5px;
             font-size: 1.3rem;
             white-space: nowrap;
             text-transform: lowercase;
+            opacity: 0.6;
         }
     }
 
@@ -2607,24 +2609,34 @@ header {
 .oldie #submit-loader .text-loader {
 	display: block;
 }
+
 .contact-info {
 	margin: 4.8rem auto 0;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
-}
-.contact-info .collapse {
-	padding: 0;
-}
-.contact-info .icon {
-	margin-bottom: 2.1rem;
-}
-.contact-info .icon i {
-	font-size: 4.2rem;
-	color: @tertiary-text-color;
-}
-.contact-info h5 {
-	color: @primary-accent-color;
+    max-width: 600px;
+
+    @media only screen and (max-width: 768px) {
+        max-width: auto;
+    }
+
+    .collapse {
+        padding: 0;
+    }
+
+    .icon {
+        margin-bottom: 2.1rem;
+
+        i {
+            font-size: 4.2rem;
+            color: @tertiary-text-color;
+        }
+    }
+
+    h5 {
+        color: @primary-accent-color;
+    }
 }
 
 /**

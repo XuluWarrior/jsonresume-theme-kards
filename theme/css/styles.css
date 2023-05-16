@@ -10700,6 +10700,7 @@ header .main-navigation li.current > a {
   text-align: center;
 }
 .intro-overlay {
+  border-top: 4px solid #fbe094;
   position: absolute;
   top: 0;
   left: 0;
@@ -11110,10 +11111,11 @@ header .main-navigation li.current > a {
   border: 1px solid #e7e7e7;
   color: #e7e7e7;
   padding: 0.2rem 0.7rem;
-  border-radius: 2rem;
+  border-radius: 5px;
   font-size: 1.3rem;
   white-space: nowrap;
   text-transform: lowercase;
+  opacity: 0.6;
 }
 #resume .timeline-header .link a:link {
   text-decoration: none;
@@ -11862,6 +11864,12 @@ header .main-navigation li.current > a {
   font-family: "poppins-regular", sans-serif;
   font-size: 1.5rem;
   text-align: center;
+  max-width: 600px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-info {
+    max-width: auto;
+  }
 }
 .contact-info .collapse {
   padding: 0;
