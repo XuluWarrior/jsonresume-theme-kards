@@ -6,7 +6,7 @@ before_install:
 
 install:
   - npm ci
-  - npm install -g resume-cli@1.2.8
+  - npm install -g resume-cli@3.0.8
   - npm install --no-save @percy/script
 
 cache:
@@ -15,7 +15,7 @@ cache:
 
 script:
 - npm run build:styles
-- resume serve --resume=example-resume.json --port 5001 --silent &
+- resume serve --theme . --resume=example-resume.json --port 5001 --silent &
 - sleep 2s
 - npx percy exec -- node tests/percy.js
 

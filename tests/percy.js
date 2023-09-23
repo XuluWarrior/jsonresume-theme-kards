@@ -14,6 +14,7 @@ async function clickMenuLink(page, percySnapshot, linkName) {
 
 PercyScript.run(async (page, percySnapshot) => {
     await page.goto('http://localhost:5001/index.html');
+    await page.waitFor(3000); // Wait for browser sync notification to disappear
     await page.waitFor(".pace-inactive");
     await percySnapshot('homepage');
 
