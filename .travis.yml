@@ -1,5 +1,5 @@
 language: node_js
-node_js: '14'
+node_js: '16'
 
 before_install:
 - npm install -g npm@7.x.x
